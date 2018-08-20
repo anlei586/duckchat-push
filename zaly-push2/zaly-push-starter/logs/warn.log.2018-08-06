@@ -1,0 +1,16 @@
+[ERROR] 2018-08-06 14:37:27,973 [org.springframework.boot.SpringApplication] Application run failed
+java.lang.IllegalArgumentException: Args must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:193)
+	at org.springframework.boot.DefaultApplicationArguments.<init>(DefaultApplicationArguments.java:41)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at com.akaxin.push.spring.SpringBootStater.main(SpringBootStater.java:23)
+	at com.akaxin.push.boot.BootStrap.startSpringBoot(BootStrap.java:42)
+	at com.akaxin.push.boot.BootStrap.main(BootStrap.java:23)
+[ERROR] 2018-08-06 14:38:10,862 [org.springframework.boot.SpringApplication] Application run failed
+java.lang.IllegalArgumentException: Args must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:193)
+	at org.springframework.boot.DefaultApplicationArguments.<init>(DefaultApplicationArguments.java:41)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at com.akaxin.push.spring.SpringBootStater.main(SpringBootStater.java:23)
+	at com.akaxin.push.boot.BootStrap.startSpringBoot(BootStrap.java:42)
+	at com.akaxin.push.boot.BootStrap.main(BootStrap.java:23)

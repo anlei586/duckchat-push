@@ -1,0 +1,30 @@
+[WARN] 2018-08-07 20:04:04,140 [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.lang.String com.akaxin.push.controller.DuckChatPushController.sendNotification(byte[])
+[WARN] 2018-08-07 20:09:36,501 [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.lang.String com.akaxin.push.controller.DuckChatPushController.sendNotification(byte[])
+[WARN] 2018-08-07 20:10:55,356 [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.lang.String com.akaxin.push.controller.DuckChatPushController.sendNotification(byte[])
+[WARN] 2018-08-07 20:25:19,733 [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.lang.String com.akaxin.push.controller.DuckChatPushController.sendNotification(byte[])
+[WARN] 2018-08-07 21:16:06,425 [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public java.lang.String com.akaxin.push.controller.DuckChatPushController.sendNotification(byte[])
+[ERROR] 2018-08-07 21:23:53,647 [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 7150 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 7150, or configure this application to listen on another port.
+
+[ERROR] 2018-08-07 22:12:21,802 [com.akaxin.platform.common.monitor.JstatMonitor] build body for jstat monitor error
+java.io.IOException: Stream closed
+	at java.io.BufferedReader.ensureOpen(BufferedReader.java:122)
+	at java.io.BufferedReader.readLine(BufferedReader.java:317)
+	at java.io.BufferedReader.readLine(BufferedReader.java:389)
+	at com.akaxin.platform.common.monitor.JstatMonitor.buildBody(JstatMonitor.java:56)
+	at com.akaxin.platform.common.monitor.ZalyMonitor.getBody(ZalyMonitor.java:47)
+	at com.akaxin.platform.common.monitor.ZalyMonitorController$1.run(ZalyMonitorController.java:32)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)

@@ -25,10 +25,10 @@ public class APNsPushManager {
 	private static final String AKZAXIN_SANDBOX_PASSWD = "123456";
 
 	private static final String DUCKCHAT_PUSH_NAME = "duckchat";
-	private static final String DUCKCHAT_OFFICIAL_CERT_FILE = "duckchat-apns-official-certificates.p12";
-	private static final String DUCKCHAT_OFFICIAL_PASSWD = "push#akaxin";
-	private static final String DUCKCHAT_SANDBOX_CERT_FILE = "duckchat-apns-sandbox-certificates.p12";
-	private static final String DUCKCHAT_SANDBOX_PASSWD = "123456";
+	private static final String DUCKCHAT_OFFICIAL_CERT_FILE = "duckchat-apns-certificates.p12";
+	private static final String DUCKCHAT_OFFICIAL_PASSWD = "push@duck.chat";
+	private static final String DUCKCHAT_SANDBOX_CERT_FILE = "duckchat-apns-certificates.p12";
+	private static final String DUCKCHAT_SANDBOX_PASSWD = "push@duck.chat";
 
 	private static final int OFFICIAL_MAX_CONN = 4;
 	private static final int SANDBOX_MAX_CONN = 2;

@@ -10,6 +10,7 @@ import com.zaly.proto.platform.Common;
 import com.zaly.proto.platform.Common.PayloadType;
 import com.zaly.push.apns.notification.Payload;
 import com.zaly.push.apns.notification.PayloadBuilder;
+import com.zaly.push.constant.PushConst;
 import com.zaly.push.pns.IPushPackage;
 
 /**
@@ -19,7 +20,6 @@ import com.zaly.push.pns.IPushPackage;
  * @since 2018-01-23 17:24:14
  */
 public class APNsPackage implements IPushPackage {
-	private static final String PUSH_GOTO = "push-goto";
 
 	private String token;
 	private String title;
@@ -101,7 +101,7 @@ public class APNsPackage implements IPushPackage {
 		}
 
 		if (StringUtils.isNotEmpty(this.pushGoto)) {
-			apsExtraFields.put(PUSH_GOTO, this.pushGoto);
+			apsExtraFields.put(PushConst.GOTO_URL, this.pushGoto);
 		}
 
 		if (alertExtraFields != null && alertExtraFields.size() > 0) {

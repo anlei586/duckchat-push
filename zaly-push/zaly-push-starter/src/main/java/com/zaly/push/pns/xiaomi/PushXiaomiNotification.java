@@ -86,10 +86,12 @@ public class PushXiaomiNotification implements IPushNotification {
 				case AKAXIN:
 					appSecretKey = AKAXIN_SECRET_KEY;
 					xiaomiPack.setRestrictedPackageName(AKAXIN_PACKAGE_NAME);
+					logger.info("xiaomi push akaxin => official ");
 					break;
 				case DUCKCHAT:
 					appSecretKey = DUCKCHAT_SECRET_KEY;
 					xiaomiPack.setRestrictedPackageName(DUCKCHAT_PACKAGE_NAME);
+					logger.info("xiaomi push duckchat => official ");
 					break;
 				default:
 					logger.error("xiaomi push error app type => official ");
@@ -99,6 +101,8 @@ public class PushXiaomiNotification implements IPushNotification {
 
 			}
 
+			logger.info("start to send xiaomi push");
+
 			Message message = xiaomiPack.buildMessage();
 
 			logger.info("start to send xiaomi push message={}", message.toString());
@@ -107,7 +111,7 @@ public class PushXiaomiNotification implements IPushNotification {
 
 			logger.info("send xiaomi push isSandbox={} result={}", isSandbox, result);
 		} catch (Exception e) {
-			logger.error(StringHelper.format("send xiaomi push error", xiaomiPack), e);
+			logger.error("send xiaomi push error", e);
 		}
 	}
 

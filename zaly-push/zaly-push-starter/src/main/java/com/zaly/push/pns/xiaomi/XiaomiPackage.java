@@ -9,10 +9,10 @@ import com.akaxin.platform.common.utils.GsonUtils;
 import com.xiaomi.xmpush.server.Message;
 import com.zaly.proto.platform.Common;
 import com.zaly.proto.platform.Common.PayloadType;
+import com.zaly.push.constant.PushConst;
 import com.zaly.push.pns.IPushPackage;
 
 public class XiaomiPackage implements IPushPackage {
-	private static final String PUSH_GOTO = "push-goto";
 
 	private String pushToken;
 	private String title; // 通知栏展示的通知的标题。
@@ -148,7 +148,7 @@ public class XiaomiPackage implements IPushPackage {
 				.notifyId(this.getNotifyId());
 
 		if (StringUtils.isNotEmpty(this.pushGoto)) {
-			messageBuilder.extra(PUSH_GOTO, this.pushGoto);
+			messageBuilder.extra(PushConst.GOTO_URL, this.pushGoto);
 		}
 
 		return messageBuilder.build();

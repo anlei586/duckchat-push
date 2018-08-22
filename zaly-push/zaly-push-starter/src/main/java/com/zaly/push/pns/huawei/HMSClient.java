@@ -14,6 +14,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.zaly.push.constant.PushConst;
 
 public class HMSClient {
 
@@ -22,8 +23,6 @@ public class HMSClient {
 	private static String apiUrl = "https://api.push.hicloud.com/pushsend.do"; // 应用级消息下发API
 	private static String accessToken;// 下发通知消息的认证Token
 	private static long tokenExpiredTime; // accessToken的过期时间
-
-	private static final String PUSH_GOTO = "push-goto";
 
 	public static void main(String[] args) throws IOException {
 		// sendPushMessage();
@@ -85,7 +84,7 @@ public class HMSClient {
 		JSONObject ext = new JSONObject();// 扩展信息，含BI消息统计，特定展示风格，消息折叠。
 		// ext.put("biTag", "Trump");// 设置消息标签，如果带了这个标签，会在回执中推送给CP用于检测某种类型消息的到达率和状态
 		ext.put("icon", hpack.getPic());// 自定义推送消息在通知栏的图标,value为一个公网可以访问的URL
-		ext.put(PUSH_GOTO, hpack.getPushGoto());
+		ext.put(PushConst.GOTO_URL, hpack.getPushGoto());
 
 		if (hpack.getExtraFields() != null && hpack.getExtraFields().size() > 0) {
 			ext.putAll(hpack.getExtraFields());
@@ -109,7 +108,8 @@ public class HMSClient {
 		httpPost(postUrl, postBody, 5000, 5000);// 5s 超时
 	}
 
-	private static String httpPost(String httpUrl, String data, int connectTimeout, int readTimeout) throws IOException {
+	private static String httpPost(String httpUrl, String data, int connectTimeout, int readTimeout)
+			throws IOException {
 		OutputStream outPut = null;
 		HttpURLConnection urlConnection = null;
 		InputStream in = null;

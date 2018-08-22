@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.zaly.push.constant.AppEnum;
+import com.zaly.push.constant.PushConst;
 import com.zaly.push.pns.IPushNotification;
 import com.zaly.push.pns.IPushPackage;
 import com.zaly.push.pns.PushResult;
@@ -31,7 +32,6 @@ public class PushUmengNotification implements IPushNotification {
 	private static final String DUCKCHAT_UMENG_APP_MASTER_SECRET_DEBUG = "qv6edl8pj5qnpuzyr6ckzlvm37gom3ve";
 
 	private static final String SANBOX_PRE = "dev_";
-	private static final String PUSH_GOTO = "push-goto";
 
 	private UmengPushClient umengPushclient = new UmengPushClient();
 
@@ -95,7 +95,7 @@ public class PushUmengNotification implements IPushNotification {
 			unicast.goAppAfterOpen();
 			unicast.setDisplayType(AndroidNotification.DisplayType.NOTIFICATION);
 
-			unicast.setExtraField(PUSH_GOTO, umPack.getPushGoto());
+			unicast.setExtraField(PushConst.GOTO_URL, umPack.getPushGoto());
 
 			PushResult result = umengPushclient.send(unicast);
 

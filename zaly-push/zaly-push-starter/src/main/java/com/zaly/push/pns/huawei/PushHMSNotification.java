@@ -25,7 +25,7 @@ public class PushHMSNotification implements IPushNotification {
 
 	private static final String DUCKCHAT_APP_SECRET_DEBUG = "2324f173abb369ce90f11a706305e49b";
 
-	private static final String DEV_PRE = "dev_";
+	private static final String DEV_PRE = "dev";
 
 	private static class SingletonHolder {
 		private static PushHMSNotification instance = new PushHMSNotification();
@@ -51,6 +51,7 @@ public class PushHMSNotification implements IPushNotification {
 					break;
 				case DUCKCHAT:
 					hpack.setPackageName(DUCKCHAT_PACKATE_NAME_DEBUG);
+					hpack.setPushToken(pushToken);
 					appId = DUCKCHAT_APP_ID_DEBUG;
 					appSecret = DUCKCHAT_APP_SECRET_DEBUG;
 					break;
@@ -66,6 +67,7 @@ public class PushHMSNotification implements IPushNotification {
 					break;
 				case DUCKCHAT:
 					hpack.setPackageName(DUCKCHAT_PACKATE_NAME);
+					hpack.setPushToken(pushToken);
 					appId = DUCKCHAT_APP_ID;
 					appSecret = DUCKCHAT_APP_SECRET;
 					break;

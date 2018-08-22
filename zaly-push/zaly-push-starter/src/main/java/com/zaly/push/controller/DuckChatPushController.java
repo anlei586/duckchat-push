@@ -2,7 +2,8 @@ package com.zaly.push.controller;
 
 import java.util.List;
 
-import org.apache.commons.codec.binary.Base64;
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -28,25 +29,20 @@ public class DuckChatPushController extends AbstractPushController {
 
 	@RequestMapping(method = RequestMethod.POST, value = "/push")
 	@ResponseBody
-	public byte[] sendNotification(@RequestBody byte[] bodyBase64) {
+	public byte[] sendNotification(HttpServletRequest httpRequest, @RequestBody byte[] bodyBase64Bytes) {
 		ErrorCode errCode = ErrorCode.ERROR;
 		String action = "api.push.payload";
 		try {
 
-			byte[] bodyParam = Base64.decodeBase64(bodyBase64);
-
-			Net.TransportData data = Net.TransportData.parseFrom(bodyParam);
+			Net.TransportData data = Net.TransportData.parseFrom(bodyBase64Bytes);
 			action = data.getAction();
 			Any any = data.getBody();
-
-			System.out.println("-------action = " + data.getAction());
 
 			ApiPushPayload.ApiPushPayloadRequest request = any.unpack(ApiPushPayload.ApiPushPayloadRequest.class);
 
 			List<Common.Payload> payloadList = request.getPayloadsList();
 
-			logger.info("/duckchat/push payloadList={}", payloadList.toString());
-			logger.info("/duckchat/push payloadSize={}", payloadList.size());
+			logger.info("/duckchat/push count={} payloadList={}", payloadList.size(), payloadList.toString());
 
 			for (Common.Payload payload : payloadList) {
 

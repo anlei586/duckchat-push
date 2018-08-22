@@ -184,16 +184,16 @@
 			<groupId>com.xiaomi</groupId>
 			<artifactId>MiPush-SDK-Server</artifactId>
 			<version>2.2.18</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/MiPush-SDK-Server-2.2.18.jar</systemPath>
+			<!-- <scope>system</scope>
+			<systemPath>${project.basedir}/lib/MiPush-SDK-Server-2.2.18.jar</systemPath> -->
 		</dependency>
 
 		<dependency>
 			<groupId>org.json.simple</groupId>
 			<artifactId>json-simple</artifactId>
 			<version>1.1.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/json-simple-1.1.1.jar</systemPath>
+			<!-- <scope>system</scope>
+			<systemPath>${project.basedir}/lib/json-simple-1.1.1.jar</systemPath> -->
 		</dependency>
 
 		<dependency>

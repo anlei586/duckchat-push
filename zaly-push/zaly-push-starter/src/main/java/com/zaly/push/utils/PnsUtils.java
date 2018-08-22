@@ -45,7 +45,7 @@ public class PnsUtils {
 
 	public static HmsPackage buidHuawei(Common.Payload payload) {
 		HmsPackage hpk = new HmsPackage();
-		hpk.setPushToken(payload.getPushGoto());
+		hpk.setPushToken(payload.getToken());
 		hpk.setTitle(payload.getTitle());
 		if (StringUtils.isNotEmpty(payload.getSubTitle())) {
 			hpk.setContent(payload.getSubTitle() + "\n" + payload.getBody());

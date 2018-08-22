@@ -10,17 +10,17 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.zaly.push.pns.PushResult;
 
 //umeng server for java
 public class UmengPushClient {
+	private static final Logger logger = LoggerFactory.getLogger(UmengPushClient.class);
 
 	// The user agent
 	protected final String USER_AGENT = "Mozilla/5.0";
-
-	// This object is used for sending the post request to Umeng
-	protected HttpClient client = new DefaultHttpClient();
 
 	// The host
 	protected static final String host = "http://msg.umeng.com";
@@ -33,31 +33,43 @@ public class UmengPushClient {
 
 	public PushResult send(UmengNotification msg) throws Exception {
 		PushResult pres = new PushResult();
-		String timestamp = Integer.toString((int) (System.currentTimeMillis() / 1000));
-		msg.setPredefinedKeyValue("timestamp", timestamp);
-		String url = host + postPath;
-		String postBody = msg.getPostBody();
-		String sign = DigestUtils.md5Hex(("POST" + url + postBody + msg.getAppMasterSecret()).getBytes("utf8"));
-		url = url + "?sign=" + sign;
-		HttpPost post = new HttpPost(url);
-		post.setHeader("User-Agent", USER_AGENT);
-		StringEntity se = new StringEntity(postBody, "UTF-8");
-		post.setEntity(se);
-		// Send the post request and get the response
-		HttpResponse response = client.execute(post);
-		int status = response.getStatusLine().getStatusCode();
+		BufferedReader buffReader = null;
+		try {
+			String timestamp = Integer.toString((int) (System.currentTimeMillis() / 1000));
+			msg.setPredefinedKeyValue("timestamp", timestamp);
+			String url = host + postPath;
+			String postBody = msg.getPostBody();
+			String sign = DigestUtils.md5Hex(("POST" + url + postBody + msg.getAppMasterSecret()).getBytes("utf8"));
+			url = url + "?sign=" + sign;
+			HttpPost post = new HttpPost(url);
+			post.setHeader("User-Agent", USER_AGENT);
+			StringEntity se = new StringEntity(postBody, "UTF-8");
+			post.setEntity(se);
+			// Send the post request and get the response
+			// This object is used for sending the post request to Umeng
+			HttpClient client = new DefaultHttpClient();
+			HttpResponse response = client.execute(post);
+			int status = response.getStatusLine().getStatusCode();
 
-		BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
-		StringBuffer result = new StringBuffer();
-		String line = "";
-		while ((line = rd.readLine()) != null) {
-			result.append(line);
-		}
-		pres.setResMsg(result.toString());
-		if (status == 200) {
-			pres.setSuccess(true);
-		} else {
+			buffReader = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+			StringBuffer result = new StringBuffer();
+			String line = "";
+			while ((line = buffReader.readLine()) != null) {
+				result.append(line);
+			}
+			pres.setResMsg(result.toString());
+			if (status == 200) {
+				pres.setSuccess(true);
+			} else {
+				pres.setSuccess(false);
+			}
+		} catch (Exception e) {
 			pres.setSuccess(false);
+			logger.error("send umeng push error", e);
+		} finally {
+			if (buffReader != null) {
+				buffReader.close();
+			}
 		}
 		return pres;
 	}
@@ -80,6 +92,7 @@ public class UmengPushClient {
 		StringEntity se = new StringEntity(postBody, "UTF-8");
 		post.setEntity(se);
 		// Send the post request and get the response
+		HttpClient client = new DefaultHttpClient();
 		HttpResponse response = client.execute(post);
 		System.out.println("Response Code : " + response.getStatusLine().getStatusCode());
 		BufferedReader rd = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));

@@ -31,7 +31,7 @@ public class PushUmengNotification implements IPushNotification {
 	private static final String DUCKCHAT_UMENG_APP_KEY_DEBUG = "5b72551ff43e482e33000015";
 	private static final String DUCKCHAT_UMENG_APP_MASTER_SECRET_DEBUG = "qv6edl8pj5qnpuzyr6ckzlvm37gom3ve";
 
-	private static final String SANBOX_PRE = "dev_";
+	private static final String SANBOX_PRE = "dev";
 
 	private UmengPushClient umengPushclient = new UmengPushClient();
 
@@ -96,6 +96,9 @@ public class PushUmengNotification implements IPushNotification {
 			unicast.setDisplayType(AndroidNotification.DisplayType.NOTIFICATION);
 
 			unicast.setExtraField(PushConst.GOTO_URL, umPack.getPushGoto());
+
+			logger.info("start send umeng push masterSecret={}", unicast.getAppMasterSecret());
+			logger.info("start send umeng push postBody={}", unicast.getPostBody());
 
 			PushResult result = umengPushclient.send(unicast);
 

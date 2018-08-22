@@ -48,7 +48,7 @@ public class PnsUtils {
 		hpk.setPushToken(payload.getToken());
 		hpk.setTitle(payload.getTitle());
 		if (StringUtils.isNotEmpty(payload.getSubTitle())) {
-			hpk.setContent(payload.getSubTitle() + "\n" + payload.getBody());
+			hpk.setContent("[" + payload.getSubTitle() + "]" + payload.getBody());
 		} else {
 			hpk.setContent(payload.getBody());
 		}

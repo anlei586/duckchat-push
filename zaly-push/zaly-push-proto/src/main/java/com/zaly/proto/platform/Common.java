@@ -149,272 +149,6 @@ public final class Common {
   }
 
   /**
-   * Protobuf enum {@code platform.PushRoomType}
-   */
-  public enum PushRoomType
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>PushRoomGroup = 0;</code>
-     */
-    PushRoomGroup(0),
-    /**
-     * <code>PushRoomU2 = 1;</code>
-     */
-    PushRoomU2(1),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>PushRoomGroup = 0;</code>
-     */
-    public static final int PushRoomGroup_VALUE = 0;
-    /**
-     * <code>PushRoomU2 = 1;</code>
-     */
-    public static final int PushRoomU2_VALUE = 1;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static PushRoomType valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static PushRoomType forNumber(int value) {
-      switch (value) {
-        case 0: return PushRoomGroup;
-        case 1: return PushRoomU2;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<PushRoomType>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        PushRoomType> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<PushRoomType>() {
-            public PushRoomType findValueByNumber(int number) {
-              return PushRoomType.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.zaly.proto.platform.Common.getDescriptor().getEnumTypes().get(1);
-    }
-
-    private static final PushRoomType[] VALUES = values();
-
-    public static PushRoomType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private PushRoomType(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:platform.PushRoomType)
-  }
-
-  /**
-   * Protobuf enum {@code platform.PushType}
-   */
-  public enum PushType
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <pre>
-     *error
-     * </pre>
-     *
-     * <code>PushMessageInvalid = 0;</code>
-     */
-    PushMessageInvalid(0),
-    /**
-     * <code>PushMessageNotice = 1;</code>
-     */
-    PushMessageNotice(1),
-    /**
-     * <code>PushMessageText = 2;</code>
-     */
-    PushMessageText(2),
-    /**
-     * <code>PushMessageImage = 3;</code>
-     */
-    PushMessageImage(3),
-    /**
-     * <code>PushMessageAudio = 4;</code>
-     */
-    PushMessageAudio(4),
-    /**
-     * <code>PushMessageWeb = 5;</code>
-     */
-    PushMessageWeb(5),
-    /**
-     * <code>PushMessageWebNotice = 6;</code>
-     */
-    PushMessageWebNotice(6),
-    /**
-     * <pre>
-     * event message start
-     * </pre>
-     *
-     * <code>PushMessageEventFriendRequest = 20;</code>
-     */
-    PushMessageEventFriendRequest(20),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <pre>
-     *error
-     * </pre>
-     *
-     * <code>PushMessageInvalid = 0;</code>
-     */
-    public static final int PushMessageInvalid_VALUE = 0;
-    /**
-     * <code>PushMessageNotice = 1;</code>
-     */
-    public static final int PushMessageNotice_VALUE = 1;
-    /**
-     * <code>PushMessageText = 2;</code>
-     */
-    public static final int PushMessageText_VALUE = 2;
-    /**
-     * <code>PushMessageImage = 3;</code>
-     */
-    public static final int PushMessageImage_VALUE = 3;
-    /**
-     * <code>PushMessageAudio = 4;</code>
-     */
-    public static final int PushMessageAudio_VALUE = 4;
-    /**
-     * <code>PushMessageWeb = 5;</code>
-     */
-    public static final int PushMessageWeb_VALUE = 5;
-    /**
-     * <code>PushMessageWebNotice = 6;</code>
-     */
-    public static final int PushMessageWebNotice_VALUE = 6;
-    /**
-     * <pre>
-     * event message start
-     * </pre>
-     *
-     * <code>PushMessageEventFriendRequest = 20;</code>
-     */
-    public static final int PushMessageEventFriendRequest_VALUE = 20;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static PushType valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static PushType forNumber(int value) {
-      switch (value) {
-        case 0: return PushMessageInvalid;
-        case 1: return PushMessageNotice;
-        case 2: return PushMessageText;
-        case 3: return PushMessageImage;
-        case 4: return PushMessageAudio;
-        case 5: return PushMessageWeb;
-        case 6: return PushMessageWebNotice;
-        case 20: return PushMessageEventFriendRequest;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<PushType>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        PushType> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<PushType>() {
-            public PushType findValueByNumber(int number) {
-              return PushType.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.zaly.proto.platform.Common.getDescriptor().getEnumTypes().get(2);
-    }
-
-    private static final PushType[] VALUES = values();
-
-    public static PushType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private PushType(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:platform.PushType)
-  }
-
-  /**
    * <pre>
    *payload type
    * </pre>
@@ -526,7 +260,7 @@ public final class Common {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.zaly.proto.platform.Common.getDescriptor().getEnumTypes().get(3);
+      return com.zaly.proto.platform.Common.getDescriptor().getEnumTypes().get(1);
     }
 
     private static final PayloadType[] VALUES = values();
@@ -557,18 +291,10 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <pre>
-     *site address -&gt; [127.0.0.1:2021]
-     * </pre>
-     *
      * <code>string siteAddress = 1;</code>
      */
     java.lang.String getSiteAddress();
     /**
-     * <pre>
-     *site address -&gt; [127.0.0.1:2021]
-     * </pre>
-     *
      * <code>string siteAddress = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -585,65 +311,42 @@ public final class Common {
         getSiteNameBytes();
 
     /**
-     * <pre>
-     * sitePubkBase64 -&gt; SHA1()
-     * </pre>
-     *
-     * <code>string sitePubkId = 3;</code>
+     * <code>string sitePubkPemId = 3;</code>
      */
-    java.lang.String getSitePubkId();
+    java.lang.String getSitePubkPemId();
     /**
-     * <pre>
-     * sitePubkBase64 -&gt; SHA1()
-     * </pre>
-     *
-     * <code>string sitePubkId = 3;</code>
+     * <code>string sitePubkPemId = 3;</code>
      */
     com.google.protobuf.ByteString
-        getSitePubkIdBytes();
+        getSitePubkPemIdBytes();
 
     /**
      * <pre>
-     * random.body is a random string ,length &gt;= 32
+     * string(timestamp unit: seconds)
      * </pre>
      *
-     * <code>.platform.RandomWithTime random = 4;</code>
+     * <code>string timestampSeconds = 4;</code>
      */
-    boolean hasRandom();
+    java.lang.String getTimestampSeconds();
     /**
      * <pre>
-     * random.body is a random string ,length &gt;= 32
+     * string(timestamp unit: seconds)
      * </pre>
      *
-     * <code>.platform.RandomWithTime random = 4;</code>
-     */
-    com.zaly.proto.platform.Common.RandomWithTime getRandom();
-    /**
-     * <pre>
-     * random.body is a random string ,length &gt;= 32
-     * </pre>
-     *
-     * <code>.platform.RandomWithTime random = 4;</code>
-     */
-    com.zaly.proto.platform.Common.RandomWithTimeOrBuilder getRandomOrBuilder();
-
-    /**
-     * <pre>
-     * data = rsa(sitePrivK, random.bytes()).base64String();
-     * </pre>
-     *
-     * <code>string signBase64 = 5;</code>
-     */
-    java.lang.String getSignBase64();
-    /**
-     * <pre>
-     * data = rsa(sitePrivK, random.bytes()).base64String();
-     * </pre>
-     *
-     * <code>string signBase64 = 5;</code>
+     * <code>string timestampSeconds = 4;</code>
      */
     com.google.protobuf.ByteString
-        getSignBase64Bytes();
+        getTimestampSecondsBytes();
+
+    /**
+     * <code>string signTimestamp = 5;</code>
+     */
+    java.lang.String getSignTimestamp();
+    /**
+     * <code>string signTimestamp = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getSignTimestampBytes();
   }
   /**
    * <pre>
@@ -664,8 +367,9 @@ public final class Common {
     private PushHeader() {
       siteAddress_ = "";
       siteName_ = "";
-      sitePubkId_ = "";
-      signBase64_ = "";
+      sitePubkPemId_ = "";
+      timestampSeconds_ = "";
+      signTimestamp_ = "";
     }
 
     @java.lang.Override
@@ -714,26 +418,19 @@ public final class Common {
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              sitePubkId_ = s;
+              sitePubkPemId_ = s;
               break;
             }
             case 34: {
-              com.zaly.proto.platform.Common.RandomWithTime.Builder subBuilder = null;
-              if (random_ != null) {
-                subBuilder = random_.toBuilder();
-              }
-              random_ = input.readMessage(com.zaly.proto.platform.Common.RandomWithTime.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(random_);
-                random_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              timestampSeconds_ = s;
               break;
             }
             case 42: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              signBase64_ = s;
+              signTimestamp_ = s;
               break;
             }
           }
@@ -763,10 +460,6 @@ public final class Common {
     public static final int SITEADDRESS_FIELD_NUMBER = 1;
     private volatile java.lang.Object siteAddress_;
     /**
-     * <pre>
-     *site address -&gt; [127.0.0.1:2021]
-     * </pre>
-     *
      * <code>string siteAddress = 1;</code>
      */
     public java.lang.String getSiteAddress() {
@@ -782,10 +475,6 @@ public final class Common {
       }
     }
     /**
-     * <pre>
-     *site address -&gt; [127.0.0.1:2021]
-     * </pre>
-     *
      * <code>string siteAddress = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -836,117 +525,110 @@ public final class Common {
       }
     }
 
-    public static final int SITEPUBKID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object sitePubkId_;
+    public static final int SITEPUBKPEMID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object sitePubkPemId_;
     /**
-     * <pre>
-     * sitePubkBase64 -&gt; SHA1()
-     * </pre>
-     *
-     * <code>string sitePubkId = 3;</code>
+     * <code>string sitePubkPemId = 3;</code>
      */
-    public java.lang.String getSitePubkId() {
-      java.lang.Object ref = sitePubkId_;
+    public java.lang.String getSitePubkPemId() {
+      java.lang.Object ref = sitePubkPemId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        sitePubkId_ = s;
+        sitePubkPemId_ = s;
         return s;
       }
     }
     /**
-     * <pre>
-     * sitePubkBase64 -&gt; SHA1()
-     * </pre>
-     *
-     * <code>string sitePubkId = 3;</code>
+     * <code>string sitePubkPemId = 3;</code>
      */
     public com.google.protobuf.ByteString
-        getSitePubkIdBytes() {
-      java.lang.Object ref = sitePubkId_;
+        getSitePubkPemIdBytes() {
+      java.lang.Object ref = sitePubkPemId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        sitePubkId_ = b;
+        sitePubkPemId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int RANDOM_FIELD_NUMBER = 4;
-    private com.zaly.proto.platform.Common.RandomWithTime random_;
+    public static final int TIMESTAMPSECONDS_FIELD_NUMBER = 4;
+    private volatile java.lang.Object timestampSeconds_;
     /**
      * <pre>
-     * random.body is a random string ,length &gt;= 32
+     * string(timestamp unit: seconds)
      * </pre>
      *
-     * <code>.platform.RandomWithTime random = 4;</code>
+     * <code>string timestampSeconds = 4;</code>
      */
-    public boolean hasRandom() {
-      return random_ != null;
-    }
-    /**
-     * <pre>
-     * random.body is a random string ,length &gt;= 32
-     * </pre>
-     *
-     * <code>.platform.RandomWithTime random = 4;</code>
-     */
-    public com.zaly.proto.platform.Common.RandomWithTime getRandom() {
-      return random_ == null ? com.zaly.proto.platform.Common.RandomWithTime.getDefaultInstance() : random_;
-    }
-    /**
-     * <pre>
-     * random.body is a random string ,length &gt;= 32
-     * </pre>
-     *
-     * <code>.platform.RandomWithTime random = 4;</code>
-     */
-    public com.zaly.proto.platform.Common.RandomWithTimeOrBuilder getRandomOrBuilder() {
-      return getRandom();
-    }
-
-    public static final int SIGNBASE64_FIELD_NUMBER = 5;
-    private volatile java.lang.Object signBase64_;
-    /**
-     * <pre>
-     * data = rsa(sitePrivK, random.bytes()).base64String();
-     * </pre>
-     *
-     * <code>string signBase64 = 5;</code>
-     */
-    public java.lang.String getSignBase64() {
-      java.lang.Object ref = signBase64_;
+    public java.lang.String getTimestampSeconds() {
+      java.lang.Object ref = timestampSeconds_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        signBase64_ = s;
+        timestampSeconds_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * data = rsa(sitePrivK, random.bytes()).base64String();
+     * string(timestamp unit: seconds)
      * </pre>
      *
-     * <code>string signBase64 = 5;</code>
+     * <code>string timestampSeconds = 4;</code>
      */
     public com.google.protobuf.ByteString
-        getSignBase64Bytes() {
-      java.lang.Object ref = signBase64_;
+        getTimestampSecondsBytes() {
+      java.lang.Object ref = timestampSeconds_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        signBase64_ = b;
+        timestampSeconds_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGNTIMESTAMP_FIELD_NUMBER = 5;
+    private volatile java.lang.Object signTimestamp_;
+    /**
+     * <code>string signTimestamp = 5;</code>
+     */
+    public java.lang.String getSignTimestamp() {
+      java.lang.Object ref = signTimestamp_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        signTimestamp_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string signTimestamp = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSignTimestampBytes() {
+      java.lang.Object ref = signTimestamp_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        signTimestamp_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -971,14 +653,14 @@ public final class Common {
       if (!getSiteNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, siteName_);
       }
-      if (!getSitePubkIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, sitePubkId_);
+      if (!getSitePubkPemIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, sitePubkPemId_);
       }
-      if (random_ != null) {
-        output.writeMessage(4, getRandom());
+      if (!getTimestampSecondsBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, timestampSeconds_);
       }
-      if (!getSignBase64Bytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, signBase64_);
+      if (!getSignTimestampBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, signTimestamp_);
       }
       unknownFields.writeTo(output);
     }
@@ -994,15 +676,14 @@ public final class Common {
       if (!getSiteNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, siteName_);
       }
-      if (!getSitePubkIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, sitePubkId_);
+      if (!getSitePubkPemIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, sitePubkPemId_);
       }
-      if (random_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getRandom());
+      if (!getTimestampSecondsBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, timestampSeconds_);
       }
-      if (!getSignBase64Bytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, signBase64_);
+      if (!getSignTimestampBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, signTimestamp_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1024,15 +705,12 @@ public final class Common {
           .equals(other.getSiteAddress());
       result = result && getSiteName()
           .equals(other.getSiteName());
-      result = result && getSitePubkId()
-          .equals(other.getSitePubkId());
-      result = result && (hasRandom() == other.hasRandom());
-      if (hasRandom()) {
-        result = result && getRandom()
-            .equals(other.getRandom());
-      }
-      result = result && getSignBase64()
-          .equals(other.getSignBase64());
+      result = result && getSitePubkPemId()
+          .equals(other.getSitePubkPemId());
+      result = result && getTimestampSeconds()
+          .equals(other.getTimestampSeconds());
+      result = result && getSignTimestamp()
+          .equals(other.getSignTimestamp());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1048,14 +726,12 @@ public final class Common {
       hash = (53 * hash) + getSiteAddress().hashCode();
       hash = (37 * hash) + SITENAME_FIELD_NUMBER;
       hash = (53 * hash) + getSiteName().hashCode();
-      hash = (37 * hash) + SITEPUBKID_FIELD_NUMBER;
-      hash = (53 * hash) + getSitePubkId().hashCode();
-      if (hasRandom()) {
-        hash = (37 * hash) + RANDOM_FIELD_NUMBER;
-        hash = (53 * hash) + getRandom().hashCode();
-      }
-      hash = (37 * hash) + SIGNBASE64_FIELD_NUMBER;
-      hash = (53 * hash) + getSignBase64().hashCode();
+      hash = (37 * hash) + SITEPUBKPEMID_FIELD_NUMBER;
+      hash = (53 * hash) + getSitePubkPemId().hashCode();
+      hash = (37 * hash) + TIMESTAMPSECONDS_FIELD_NUMBER;
+      hash = (53 * hash) + getTimestampSeconds().hashCode();
+      hash = (37 * hash) + SIGNTIMESTAMP_FIELD_NUMBER;
+      hash = (53 * hash) + getSignTimestamp().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1193,15 +869,11 @@ public final class Common {
 
         siteName_ = "";
 
-        sitePubkId_ = "";
+        sitePubkPemId_ = "";
 
-        if (randomBuilder_ == null) {
-          random_ = null;
-        } else {
-          random_ = null;
-          randomBuilder_ = null;
-        }
-        signBase64_ = "";
+        timestampSeconds_ = "";
+
+        signTimestamp_ = "";
 
         return this;
       }
@@ -1227,13 +899,9 @@ public final class Common {
         com.zaly.proto.platform.Common.PushHeader result = new com.zaly.proto.platform.Common.PushHeader(this);
         result.siteAddress_ = siteAddress_;
         result.siteName_ = siteName_;
-        result.sitePubkId_ = sitePubkId_;
-        if (randomBuilder_ == null) {
-          result.random_ = random_;
-        } else {
-          result.random_ = randomBuilder_.build();
-        }
-        result.signBase64_ = signBase64_;
+        result.sitePubkPemId_ = sitePubkPemId_;
+        result.timestampSeconds_ = timestampSeconds_;
+        result.signTimestamp_ = signTimestamp_;
         onBuilt();
         return result;
       }
@@ -1283,15 +951,16 @@ public final class Common {
           siteName_ = other.siteName_;
           onChanged();
         }
-        if (!other.getSitePubkId().isEmpty()) {
-          sitePubkId_ = other.sitePubkId_;
+        if (!other.getSitePubkPemId().isEmpty()) {
+          sitePubkPemId_ = other.sitePubkPemId_;
           onChanged();
         }
-        if (other.hasRandom()) {
-          mergeRandom(other.getRandom());
+        if (!other.getTimestampSeconds().isEmpty()) {
+          timestampSeconds_ = other.timestampSeconds_;
+          onChanged();
         }
-        if (!other.getSignBase64().isEmpty()) {
-          signBase64_ = other.signBase64_;
+        if (!other.getSignTimestamp().isEmpty()) {
+          signTimestamp_ = other.signTimestamp_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1323,10 +992,6 @@ public final class Common {
 
       private java.lang.Object siteAddress_ = "";
       /**
-       * <pre>
-       *site address -&gt; [127.0.0.1:2021]
-       * </pre>
-       *
        * <code>string siteAddress = 1;</code>
        */
       public java.lang.String getSiteAddress() {
@@ -1342,10 +1007,6 @@ public final class Common {
         }
       }
       /**
-       * <pre>
-       *site address -&gt; [127.0.0.1:2021]
-       * </pre>
-       *
        * <code>string siteAddress = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -1362,10 +1023,6 @@ public final class Common {
         }
       }
       /**
-       * <pre>
-       *site address -&gt; [127.0.0.1:2021]
-       * </pre>
-       *
        * <code>string siteAddress = 1;</code>
        */
       public Builder setSiteAddress(
@@ -1379,10 +1036,6 @@ public final class Common {
         return this;
       }
       /**
-       * <pre>
-       *site address -&gt; [127.0.0.1:2021]
-       * </pre>
-       *
        * <code>string siteAddress = 1;</code>
        */
       public Builder clearSiteAddress() {
@@ -1392,10 +1045,6 @@ public final class Common {
         return this;
       }
       /**
-       * <pre>
-       *site address -&gt; [127.0.0.1:2021]
-       * </pre>
-       *
        * <code>string siteAddress = 1;</code>
        */
       public Builder setSiteAddressBytes(
@@ -1479,21 +1128,90 @@ public final class Common {
         return this;
       }
 
-      private java.lang.Object sitePubkId_ = "";
+      private java.lang.Object sitePubkPemId_ = "";
       /**
-       * <pre>
-       * sitePubkBase64 -&gt; SHA1()
-       * </pre>
-       *
-       * <code>string sitePubkId = 3;</code>
+       * <code>string sitePubkPemId = 3;</code>
        */
-      public java.lang.String getSitePubkId() {
-        java.lang.Object ref = sitePubkId_;
+      public java.lang.String getSitePubkPemId() {
+        java.lang.Object ref = sitePubkPemId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          sitePubkId_ = s;
+          sitePubkPemId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string sitePubkPemId = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSitePubkPemIdBytes() {
+        java.lang.Object ref = sitePubkPemId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sitePubkPemId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string sitePubkPemId = 3;</code>
+       */
+      public Builder setSitePubkPemId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sitePubkPemId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sitePubkPemId = 3;</code>
+       */
+      public Builder clearSitePubkPemId() {
+        
+        sitePubkPemId_ = getDefaultInstance().getSitePubkPemId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string sitePubkPemId = 3;</code>
+       */
+      public Builder setSitePubkPemIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sitePubkPemId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object timestampSeconds_ = "";
+      /**
+       * <pre>
+       * string(timestamp unit: seconds)
+       * </pre>
+       *
+       * <code>string timestampSeconds = 4;</code>
+       */
+      public java.lang.String getTimestampSeconds() {
+        java.lang.Object ref = timestampSeconds_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          timestampSeconds_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1501,19 +1219,19 @@ public final class Common {
       }
       /**
        * <pre>
-       * sitePubkBase64 -&gt; SHA1()
+       * string(timestamp unit: seconds)
        * </pre>
        *
-       * <code>string sitePubkId = 3;</code>
+       * <code>string timestampSeconds = 4;</code>
        */
       public com.google.protobuf.ByteString
-          getSitePubkIdBytes() {
-        java.lang.Object ref = sitePubkId_;
+          getTimestampSecondsBytes() {
+        java.lang.Object ref = timestampSeconds_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          sitePubkId_ = b;
+          timestampSeconds_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -1521,291 +1239,118 @@ public final class Common {
       }
       /**
        * <pre>
-       * sitePubkBase64 -&gt; SHA1()
+       * string(timestamp unit: seconds)
        * </pre>
        *
-       * <code>string sitePubkId = 3;</code>
+       * <code>string timestampSeconds = 4;</code>
        */
-      public Builder setSitePubkId(
+      public Builder setTimestampSeconds(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        sitePubkId_ = value;
+        timestampSeconds_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * sitePubkBase64 -&gt; SHA1()
+       * string(timestamp unit: seconds)
        * </pre>
        *
-       * <code>string sitePubkId = 3;</code>
+       * <code>string timestampSeconds = 4;</code>
        */
-      public Builder clearSitePubkId() {
+      public Builder clearTimestampSeconds() {
         
-        sitePubkId_ = getDefaultInstance().getSitePubkId();
+        timestampSeconds_ = getDefaultInstance().getTimestampSeconds();
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * sitePubkBase64 -&gt; SHA1()
+       * string(timestamp unit: seconds)
        * </pre>
        *
-       * <code>string sitePubkId = 3;</code>
+       * <code>string timestampSeconds = 4;</code>
        */
-      public Builder setSitePubkIdBytes(
+      public Builder setTimestampSecondsBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        sitePubkId_ = value;
+        timestampSeconds_ = value;
         onChanged();
         return this;
       }
 
-      private com.zaly.proto.platform.Common.RandomWithTime random_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.zaly.proto.platform.Common.RandomWithTime, com.zaly.proto.platform.Common.RandomWithTime.Builder, com.zaly.proto.platform.Common.RandomWithTimeOrBuilder> randomBuilder_;
+      private java.lang.Object signTimestamp_ = "";
       /**
-       * <pre>
-       * random.body is a random string ,length &gt;= 32
-       * </pre>
-       *
-       * <code>.platform.RandomWithTime random = 4;</code>
+       * <code>string signTimestamp = 5;</code>
        */
-      public boolean hasRandom() {
-        return randomBuilder_ != null || random_ != null;
-      }
-      /**
-       * <pre>
-       * random.body is a random string ,length &gt;= 32
-       * </pre>
-       *
-       * <code>.platform.RandomWithTime random = 4;</code>
-       */
-      public com.zaly.proto.platform.Common.RandomWithTime getRandom() {
-        if (randomBuilder_ == null) {
-          return random_ == null ? com.zaly.proto.platform.Common.RandomWithTime.getDefaultInstance() : random_;
-        } else {
-          return randomBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * random.body is a random string ,length &gt;= 32
-       * </pre>
-       *
-       * <code>.platform.RandomWithTime random = 4;</code>
-       */
-      public Builder setRandom(com.zaly.proto.platform.Common.RandomWithTime value) {
-        if (randomBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          random_ = value;
-          onChanged();
-        } else {
-          randomBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * random.body is a random string ,length &gt;= 32
-       * </pre>
-       *
-       * <code>.platform.RandomWithTime random = 4;</code>
-       */
-      public Builder setRandom(
-          com.zaly.proto.platform.Common.RandomWithTime.Builder builderForValue) {
-        if (randomBuilder_ == null) {
-          random_ = builderForValue.build();
-          onChanged();
-        } else {
-          randomBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * random.body is a random string ,length &gt;= 32
-       * </pre>
-       *
-       * <code>.platform.RandomWithTime random = 4;</code>
-       */
-      public Builder mergeRandom(com.zaly.proto.platform.Common.RandomWithTime value) {
-        if (randomBuilder_ == null) {
-          if (random_ != null) {
-            random_ =
-              com.zaly.proto.platform.Common.RandomWithTime.newBuilder(random_).mergeFrom(value).buildPartial();
-          } else {
-            random_ = value;
-          }
-          onChanged();
-        } else {
-          randomBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * random.body is a random string ,length &gt;= 32
-       * </pre>
-       *
-       * <code>.platform.RandomWithTime random = 4;</code>
-       */
-      public Builder clearRandom() {
-        if (randomBuilder_ == null) {
-          random_ = null;
-          onChanged();
-        } else {
-          random_ = null;
-          randomBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * random.body is a random string ,length &gt;= 32
-       * </pre>
-       *
-       * <code>.platform.RandomWithTime random = 4;</code>
-       */
-      public com.zaly.proto.platform.Common.RandomWithTime.Builder getRandomBuilder() {
-        
-        onChanged();
-        return getRandomFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * random.body is a random string ,length &gt;= 32
-       * </pre>
-       *
-       * <code>.platform.RandomWithTime random = 4;</code>
-       */
-      public com.zaly.proto.platform.Common.RandomWithTimeOrBuilder getRandomOrBuilder() {
-        if (randomBuilder_ != null) {
-          return randomBuilder_.getMessageOrBuilder();
-        } else {
-          return random_ == null ?
-              com.zaly.proto.platform.Common.RandomWithTime.getDefaultInstance() : random_;
-        }
-      }
-      /**
-       * <pre>
-       * random.body is a random string ,length &gt;= 32
-       * </pre>
-       *
-       * <code>.platform.RandomWithTime random = 4;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.zaly.proto.platform.Common.RandomWithTime, com.zaly.proto.platform.Common.RandomWithTime.Builder, com.zaly.proto.platform.Common.RandomWithTimeOrBuilder> 
-          getRandomFieldBuilder() {
-        if (randomBuilder_ == null) {
-          randomBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.zaly.proto.platform.Common.RandomWithTime, com.zaly.proto.platform.Common.RandomWithTime.Builder, com.zaly.proto.platform.Common.RandomWithTimeOrBuilder>(
-                  getRandom(),
-                  getParentForChildren(),
-                  isClean());
-          random_ = null;
-        }
-        return randomBuilder_;
-      }
-
-      private java.lang.Object signBase64_ = "";
-      /**
-       * <pre>
-       * data = rsa(sitePrivK, random.bytes()).base64String();
-       * </pre>
-       *
-       * <code>string signBase64 = 5;</code>
-       */
-      public java.lang.String getSignBase64() {
-        java.lang.Object ref = signBase64_;
+      public java.lang.String getSignTimestamp() {
+        java.lang.Object ref = signTimestamp_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          signBase64_ = s;
+          signTimestamp_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <pre>
-       * data = rsa(sitePrivK, random.bytes()).base64String();
-       * </pre>
-       *
-       * <code>string signBase64 = 5;</code>
+       * <code>string signTimestamp = 5;</code>
        */
       public com.google.protobuf.ByteString
-          getSignBase64Bytes() {
-        java.lang.Object ref = signBase64_;
+          getSignTimestampBytes() {
+        java.lang.Object ref = signTimestamp_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          signBase64_ = b;
+          signTimestamp_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <pre>
-       * data = rsa(sitePrivK, random.bytes()).base64String();
-       * </pre>
-       *
-       * <code>string signBase64 = 5;</code>
+       * <code>string signTimestamp = 5;</code>
        */
-      public Builder setSignBase64(
+      public Builder setSignTimestamp(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        signBase64_ = value;
+        signTimestamp_ = value;
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       * data = rsa(sitePrivK, random.bytes()).base64String();
-       * </pre>
-       *
-       * <code>string signBase64 = 5;</code>
+       * <code>string signTimestamp = 5;</code>
        */
-      public Builder clearSignBase64() {
+      public Builder clearSignTimestamp() {
         
-        signBase64_ = getDefaultInstance().getSignBase64();
+        signTimestamp_ = getDefaultInstance().getSignTimestamp();
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       * data = rsa(sitePrivK, random.bytes()).base64String();
-       * </pre>
-       *
-       * <code>string signBase64 = 5;</code>
+       * <code>string signTimestamp = 5;</code>
        */
-      public Builder setSignBase64Bytes(
+      public Builder setSignTimestampBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        signBase64_ = value;
+        signTimestamp_ = value;
         onChanged();
         return this;
       }
@@ -1863,110 +1408,179 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.platform.PushRoomType roomType = 1;</code>
+     * <pre>
+     * subTitle
+     * if roomId != "" &amp;&amp; roomName != "", show the subTitle
+     * </pre>
+     *
+     * <code>string roomId = 1;</code>
+     */
+    java.lang.String getRoomId();
+    /**
+     * <pre>
+     * subTitle
+     * if roomId != "" &amp;&amp; roomName != "", show the subTitle
+     * </pre>
+     *
+     * <code>string roomId = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getRoomIdBytes();
+
+    /**
+     * <code>string roomName = 2;</code>
+     */
+    java.lang.String getRoomName();
+    /**
+     * <code>string roomName = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getRoomNameBytes();
+
+    /**
+     * <code>.core.MessageRoomType roomType = 3;</code>
      */
     int getRoomTypeValue();
     /**
-     * <code>.platform.PushRoomType roomType = 1;</code>
+     * <code>.core.MessageRoomType roomType = 3;</code>
      */
-    com.zaly.proto.platform.Common.PushRoomType getRoomType();
-
-    /**
-     * <code>.platform.PushType pushType = 2;</code>
-     */
-    int getPushTypeValue();
-    /**
-     * <code>.platform.PushType pushType = 2;</code>
-     */
-    com.zaly.proto.platform.Common.PushType getPushType();
+    com.zaly.proto.core.MessageOuterClass.MessageRoomType getRoomType();
 
     /**
      * <pre>
+     * Sender Info
+     * if fromUserId != "" &amp;&amp; fromUserName != "", show the sender info
      * </pre>
      *
-     * <code>.platform.PushFrom pushFrom = 3;</code>
+     * <code>string fromUserId = 4;</code>
      */
-    boolean hasPushFrom();
+    java.lang.String getFromUserId();
     /**
      * <pre>
+     * Sender Info
+     * if fromUserId != "" &amp;&amp; fromUserName != "", show the sender info
      * </pre>
      *
-     * <code>.platform.PushFrom pushFrom = 3;</code>
+     * <code>string fromUserId = 4;</code>
      */
-    com.zaly.proto.platform.Common.PushFrom getPushFrom();
+    com.google.protobuf.ByteString
+        getFromUserIdBytes();
+
     /**
-     * <pre>
-     * </pre>
-     *
-     * <code>.platform.PushFrom pushFrom = 3;</code>
+     * <code>string fromUserName = 5;</code>
      */
-    com.zaly.proto.platform.Common.PushFromOrBuilder getPushFromOrBuilder();
+    java.lang.String getFromUserName();
+    /**
+     * <code>string fromUserName = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getFromUserNameBytes();
 
     /**
      * <pre>
+     * Content
+     * if pushContent != "", use pushContent
+     * else make the content from msgType.
      * </pre>
      *
-     * <code>.platform.Notification notification = 4;</code>
+     * <code>.core.MessageType msgType = 6;</code>
      */
-    boolean hasNotification();
+    int getMsgTypeValue();
     /**
      * <pre>
+     * Content
+     * if pushContent != "", use pushContent
+     * else make the content from msgType.
      * </pre>
      *
-     * <code>.platform.Notification notification = 4;</code>
+     * <code>.core.MessageType msgType = 6;</code>
      */
-    com.zaly.proto.platform.Common.Notification getNotification();
+    com.zaly.proto.core.MessageOuterClass.MessageType getMsgType();
+
     /**
-     * <pre>
-     * </pre>
-     *
-     * <code>.platform.Notification notification = 4;</code>
+     * <code>string pushContent = 7;</code>
      */
-    com.zaly.proto.platform.Common.NotificationOrBuilder getNotificationOrBuilder();
+    java.lang.String getPushContent();
+    /**
+     * <code>string pushContent = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getPushContentBytes();
 
     /**
      * <pre>
-     *support list to receiver
+     * icon
+     * avatar must be prefix with "http://" or "https://" 
      * </pre>
      *
-     * <code>repeated .platform.PushTo pushTo = 5;</code>
+     * <code>string iconHref = 8;</code>
      */
-    java.util.List<com.zaly.proto.platform.Common.PushTo> 
-        getPushToList();
+    java.lang.String getIconHref();
     /**
      * <pre>
-     *support list to receiver
+     * icon
+     * avatar must be prefix with "http://" or "https://" 
      * </pre>
      *
-     * <code>repeated .platform.PushTo pushTo = 5;</code>
+     * <code>string iconHref = 8;</code>
      */
-    com.zaly.proto.platform.Common.PushTo getPushTo(int index);
+    com.google.protobuf.ByteString
+        getIconHrefBytes();
+
     /**
      * <pre>
-     *support list to receiver
+     * GotoUrl
+     * if gotoUrl == "", make the url from the infomation above.
      * </pre>
      *
-     * <code>repeated .platform.PushTo pushTo = 5;</code>
+     * <code>string gotoUrl = 9;</code>
      */
-    int getPushToCount();
+    java.lang.String getGotoUrl();
     /**
      * <pre>
-     *support list to receiver
+     * GotoUrl
+     * if gotoUrl == "", make the url from the infomation above.
      * </pre>
      *
-     * <code>repeated .platform.PushTo pushTo = 5;</code>
+     * <code>string gotoUrl = 9;</code>
      */
-    java.util.List<? extends com.zaly.proto.platform.Common.PushToOrBuilder> 
-        getPushToOrBuilderList();
+    com.google.protobuf.ByteString
+        getGotoUrlBytes();
+
     /**
      * <pre>
-     *support list to receiver
+     * pemId = sha1(pem)，因为平台这边有pem，同时不需要做sign的verify，所以传递Ids，以减少请求包大小
      * </pre>
      *
-     * <code>repeated .platform.PushTo pushTo = 5;</code>
+     * <code>repeated string toDevicePubkPemIds = 10;</code>
      */
-    com.zaly.proto.platform.Common.PushToOrBuilder getPushToOrBuilder(
-        int index);
+    java.util.List<java.lang.String>
+        getToDevicePubkPemIdsList();
+    /**
+     * <pre>
+     * pemId = sha1(pem)，因为平台这边有pem，同时不需要做sign的verify，所以传递Ids，以减少请求包大小
+     * </pre>
+     *
+     * <code>repeated string toDevicePubkPemIds = 10;</code>
+     */
+    int getToDevicePubkPemIdsCount();
+    /**
+     * <pre>
+     * pemId = sha1(pem)，因为平台这边有pem，同时不需要做sign的verify，所以传递Ids，以减少请求包大小
+     * </pre>
+     *
+     * <code>repeated string toDevicePubkPemIds = 10;</code>
+     */
+    java.lang.String getToDevicePubkPemIds(int index);
+    /**
+     * <pre>
+     * pemId = sha1(pem)，因为平台这边有pem，同时不需要做sign的verify，所以传递Ids，以减少请求包大小
+     * </pre>
+     *
+     * <code>repeated string toDevicePubkPemIds = 10;</code>
+     */
+    com.google.protobuf.ByteString
+        getToDevicePubkPemIdsBytes(int index);
   }
   /**
    * <pre>
@@ -1985,9 +1599,16 @@ public final class Common {
       super(builder);
     }
     private PushBody() {
+      roomId_ = "";
+      roomName_ = "";
       roomType_ = 0;
-      pushType_ = 0;
-      pushTo_ = java.util.Collections.emptyList();
+      fromUserId_ = "";
+      fromUserName_ = "";
+      msgType_ = 0;
+      pushContent_ = "";
+      iconHref_ = "";
+      gotoUrl_ = "";
+      toDevicePubkPemIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -2021,51 +1642,67 @@ public final class Common {
               }
               break;
             }
-            case 8: {
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              roomId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              roomName_ = s;
+              break;
+            }
+            case 24: {
               int rawValue = input.readEnum();
 
               roomType_ = rawValue;
               break;
             }
-            case 16: {
-              int rawValue = input.readEnum();
-
-              pushType_ = rawValue;
-              break;
-            }
-            case 26: {
-              com.zaly.proto.platform.Common.PushFrom.Builder subBuilder = null;
-              if (pushFrom_ != null) {
-                subBuilder = pushFrom_.toBuilder();
-              }
-              pushFrom_ = input.readMessage(com.zaly.proto.platform.Common.PushFrom.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(pushFrom_);
-                pushFrom_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
             case 34: {
-              com.zaly.proto.platform.Common.Notification.Builder subBuilder = null;
-              if (notification_ != null) {
-                subBuilder = notification_.toBuilder();
-              }
-              notification_ = input.readMessage(com.zaly.proto.platform.Common.Notification.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(notification_);
-                notification_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              fromUserId_ = s;
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-                pushTo_ = new java.util.ArrayList<com.zaly.proto.platform.Common.PushTo>();
-                mutable_bitField0_ |= 0x00000010;
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fromUserName_ = s;
+              break;
+            }
+            case 48: {
+              int rawValue = input.readEnum();
+
+              msgType_ = rawValue;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pushContent_ = s;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              iconHref_ = s;
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              gotoUrl_ = s;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+                toDevicePubkPemIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000200;
               }
-              pushTo_.add(
-                  input.readMessage(com.zaly.proto.platform.Common.PushTo.parser(), extensionRegistry));
+              toDevicePubkPemIds_.add(s);
               break;
             }
           }
@@ -2076,8 +1713,8 @@ public final class Common {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-          pushTo_ = java.util.Collections.unmodifiableList(pushTo_);
+        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+          toDevicePubkPemIds_ = toDevicePubkPemIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -2096,151 +1733,371 @@ public final class Common {
     }
 
     private int bitField0_;
-    public static final int ROOMTYPE_FIELD_NUMBER = 1;
+    public static final int ROOMID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object roomId_;
+    /**
+     * <pre>
+     * subTitle
+     * if roomId != "" &amp;&amp; roomName != "", show the subTitle
+     * </pre>
+     *
+     * <code>string roomId = 1;</code>
+     */
+    public java.lang.String getRoomId() {
+      java.lang.Object ref = roomId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        roomId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * subTitle
+     * if roomId != "" &amp;&amp; roomName != "", show the subTitle
+     * </pre>
+     *
+     * <code>string roomId = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRoomIdBytes() {
+      java.lang.Object ref = roomId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        roomId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ROOMNAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object roomName_;
+    /**
+     * <code>string roomName = 2;</code>
+     */
+    public java.lang.String getRoomName() {
+      java.lang.Object ref = roomName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        roomName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string roomName = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRoomNameBytes() {
+      java.lang.Object ref = roomName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        roomName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ROOMTYPE_FIELD_NUMBER = 3;
     private int roomType_;
     /**
-     * <code>.platform.PushRoomType roomType = 1;</code>
+     * <code>.core.MessageRoomType roomType = 3;</code>
      */
     public int getRoomTypeValue() {
       return roomType_;
     }
     /**
-     * <code>.platform.PushRoomType roomType = 1;</code>
+     * <code>.core.MessageRoomType roomType = 3;</code>
      */
-    public com.zaly.proto.platform.Common.PushRoomType getRoomType() {
-      com.zaly.proto.platform.Common.PushRoomType result = com.zaly.proto.platform.Common.PushRoomType.valueOf(roomType_);
-      return result == null ? com.zaly.proto.platform.Common.PushRoomType.UNRECOGNIZED : result;
+    public com.zaly.proto.core.MessageOuterClass.MessageRoomType getRoomType() {
+      com.zaly.proto.core.MessageOuterClass.MessageRoomType result = com.zaly.proto.core.MessageOuterClass.MessageRoomType.valueOf(roomType_);
+      return result == null ? com.zaly.proto.core.MessageOuterClass.MessageRoomType.UNRECOGNIZED : result;
     }
 
-    public static final int PUSHTYPE_FIELD_NUMBER = 2;
-    private int pushType_;
+    public static final int FROMUSERID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object fromUserId_;
     /**
-     * <code>.platform.PushType pushType = 2;</code>
+     * <pre>
+     * Sender Info
+     * if fromUserId != "" &amp;&amp; fromUserName != "", show the sender info
+     * </pre>
+     *
+     * <code>string fromUserId = 4;</code>
      */
-    public int getPushTypeValue() {
-      return pushType_;
+    public java.lang.String getFromUserId() {
+      java.lang.Object ref = fromUserId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fromUserId_ = s;
+        return s;
+      }
     }
     /**
-     * <code>.platform.PushType pushType = 2;</code>
+     * <pre>
+     * Sender Info
+     * if fromUserId != "" &amp;&amp; fromUserName != "", show the sender info
+     * </pre>
+     *
+     * <code>string fromUserId = 4;</code>
      */
-    public com.zaly.proto.platform.Common.PushType getPushType() {
-      com.zaly.proto.platform.Common.PushType result = com.zaly.proto.platform.Common.PushType.valueOf(pushType_);
-      return result == null ? com.zaly.proto.platform.Common.PushType.UNRECOGNIZED : result;
+    public com.google.protobuf.ByteString
+        getFromUserIdBytes() {
+      java.lang.Object ref = fromUserId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fromUserId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public static final int PUSHFROM_FIELD_NUMBER = 3;
-    private com.zaly.proto.platform.Common.PushFrom pushFrom_;
+    public static final int FROMUSERNAME_FIELD_NUMBER = 5;
+    private volatile java.lang.Object fromUserName_;
     /**
-     * <pre>
-     * </pre>
-     *
-     * <code>.platform.PushFrom pushFrom = 3;</code>
+     * <code>string fromUserName = 5;</code>
      */
-    public boolean hasPushFrom() {
-      return pushFrom_ != null;
+    public java.lang.String getFromUserName() {
+      java.lang.Object ref = fromUserName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fromUserName_ = s;
+        return s;
+      }
     }
     /**
-     * <pre>
-     * </pre>
-     *
-     * <code>.platform.PushFrom pushFrom = 3;</code>
+     * <code>string fromUserName = 5;</code>
      */
-    public com.zaly.proto.platform.Common.PushFrom getPushFrom() {
-      return pushFrom_ == null ? com.zaly.proto.platform.Common.PushFrom.getDefaultInstance() : pushFrom_;
-    }
-    /**
-     * <pre>
-     * </pre>
-     *
-     * <code>.platform.PushFrom pushFrom = 3;</code>
-     */
-    public com.zaly.proto.platform.Common.PushFromOrBuilder getPushFromOrBuilder() {
-      return getPushFrom();
-    }
-
-    public static final int NOTIFICATION_FIELD_NUMBER = 4;
-    private com.zaly.proto.platform.Common.Notification notification_;
-    /**
-     * <pre>
-     * </pre>
-     *
-     * <code>.platform.Notification notification = 4;</code>
-     */
-    public boolean hasNotification() {
-      return notification_ != null;
-    }
-    /**
-     * <pre>
-     * </pre>
-     *
-     * <code>.platform.Notification notification = 4;</code>
-     */
-    public com.zaly.proto.platform.Common.Notification getNotification() {
-      return notification_ == null ? com.zaly.proto.platform.Common.Notification.getDefaultInstance() : notification_;
-    }
-    /**
-     * <pre>
-     * </pre>
-     *
-     * <code>.platform.Notification notification = 4;</code>
-     */
-    public com.zaly.proto.platform.Common.NotificationOrBuilder getNotificationOrBuilder() {
-      return getNotification();
+    public com.google.protobuf.ByteString
+        getFromUserNameBytes() {
+      java.lang.Object ref = fromUserName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fromUserName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public static final int PUSHTO_FIELD_NUMBER = 5;
-    private java.util.List<com.zaly.proto.platform.Common.PushTo> pushTo_;
+    public static final int MSGTYPE_FIELD_NUMBER = 6;
+    private int msgType_;
     /**
      * <pre>
-     *support list to receiver
+     * Content
+     * if pushContent != "", use pushContent
+     * else make the content from msgType.
      * </pre>
      *
-     * <code>repeated .platform.PushTo pushTo = 5;</code>
+     * <code>.core.MessageType msgType = 6;</code>
      */
-    public java.util.List<com.zaly.proto.platform.Common.PushTo> getPushToList() {
-      return pushTo_;
+    public int getMsgTypeValue() {
+      return msgType_;
     }
     /**
      * <pre>
-     *support list to receiver
+     * Content
+     * if pushContent != "", use pushContent
+     * else make the content from msgType.
      * </pre>
      *
-     * <code>repeated .platform.PushTo pushTo = 5;</code>
+     * <code>.core.MessageType msgType = 6;</code>
      */
-    public java.util.List<? extends com.zaly.proto.platform.Common.PushToOrBuilder> 
-        getPushToOrBuilderList() {
-      return pushTo_;
+    public com.zaly.proto.core.MessageOuterClass.MessageType getMsgType() {
+      com.zaly.proto.core.MessageOuterClass.MessageType result = com.zaly.proto.core.MessageOuterClass.MessageType.valueOf(msgType_);
+      return result == null ? com.zaly.proto.core.MessageOuterClass.MessageType.UNRECOGNIZED : result;
+    }
+
+    public static final int PUSHCONTENT_FIELD_NUMBER = 7;
+    private volatile java.lang.Object pushContent_;
+    /**
+     * <code>string pushContent = 7;</code>
+     */
+    public java.lang.String getPushContent() {
+      java.lang.Object ref = pushContent_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pushContent_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string pushContent = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPushContentBytes() {
+      java.lang.Object ref = pushContent_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pushContent_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ICONHREF_FIELD_NUMBER = 8;
+    private volatile java.lang.Object iconHref_;
+    /**
+     * <pre>
+     * icon
+     * avatar must be prefix with "http://" or "https://" 
+     * </pre>
+     *
+     * <code>string iconHref = 8;</code>
+     */
+    public java.lang.String getIconHref() {
+      java.lang.Object ref = iconHref_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        iconHref_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
-     *support list to receiver
+     * icon
+     * avatar must be prefix with "http://" or "https://" 
      * </pre>
      *
-     * <code>repeated .platform.PushTo pushTo = 5;</code>
+     * <code>string iconHref = 8;</code>
      */
-    public int getPushToCount() {
-      return pushTo_.size();
+    public com.google.protobuf.ByteString
+        getIconHrefBytes() {
+      java.lang.Object ref = iconHref_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        iconHref_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GOTOURL_FIELD_NUMBER = 9;
+    private volatile java.lang.Object gotoUrl_;
+    /**
+     * <pre>
+     * GotoUrl
+     * if gotoUrl == "", make the url from the infomation above.
+     * </pre>
+     *
+     * <code>string gotoUrl = 9;</code>
+     */
+    public java.lang.String getGotoUrl() {
+      java.lang.Object ref = gotoUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        gotoUrl_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
-     *support list to receiver
+     * GotoUrl
+     * if gotoUrl == "", make the url from the infomation above.
      * </pre>
      *
-     * <code>repeated .platform.PushTo pushTo = 5;</code>
+     * <code>string gotoUrl = 9;</code>
      */
-    public com.zaly.proto.platform.Common.PushTo getPushTo(int index) {
-      return pushTo_.get(index);
+    public com.google.protobuf.ByteString
+        getGotoUrlBytes() {
+      java.lang.Object ref = gotoUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gotoUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TODEVICEPUBKPEMIDS_FIELD_NUMBER = 10;
+    private com.google.protobuf.LazyStringList toDevicePubkPemIds_;
+    /**
+     * <pre>
+     * pemId = sha1(pem)，因为平台这边有pem，同时不需要做sign的verify，所以传递Ids，以减少请求包大小
+     * </pre>
+     *
+     * <code>repeated string toDevicePubkPemIds = 10;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getToDevicePubkPemIdsList() {
+      return toDevicePubkPemIds_;
     }
     /**
      * <pre>
-     *support list to receiver
+     * pemId = sha1(pem)，因为平台这边有pem，同时不需要做sign的verify，所以传递Ids，以减少请求包大小
      * </pre>
      *
-     * <code>repeated .platform.PushTo pushTo = 5;</code>
+     * <code>repeated string toDevicePubkPemIds = 10;</code>
      */
-    public com.zaly.proto.platform.Common.PushToOrBuilder getPushToOrBuilder(
-        int index) {
-      return pushTo_.get(index);
+    public int getToDevicePubkPemIdsCount() {
+      return toDevicePubkPemIds_.size();
+    }
+    /**
+     * <pre>
+     * pemId = sha1(pem)，因为平台这边有pem，同时不需要做sign的verify，所以传递Ids，以减少请求包大小
+     * </pre>
+     *
+     * <code>repeated string toDevicePubkPemIds = 10;</code>
+     */
+    public java.lang.String getToDevicePubkPemIds(int index) {
+      return toDevicePubkPemIds_.get(index);
+    }
+    /**
+     * <pre>
+     * pemId = sha1(pem)，因为平台这边有pem，同时不需要做sign的verify，所以传递Ids，以减少请求包大小
+     * </pre>
+     *
+     * <code>repeated string toDevicePubkPemIds = 10;</code>
+     */
+    public com.google.protobuf.ByteString
+        getToDevicePubkPemIdsBytes(int index) {
+      return toDevicePubkPemIds_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2255,20 +2112,35 @@ public final class Common {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (roomType_ != com.zaly.proto.platform.Common.PushRoomType.PushRoomGroup.getNumber()) {
-        output.writeEnum(1, roomType_);
+      if (!getRoomIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, roomId_);
       }
-      if (pushType_ != com.zaly.proto.platform.Common.PushType.PushMessageInvalid.getNumber()) {
-        output.writeEnum(2, pushType_);
+      if (!getRoomNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, roomName_);
       }
-      if (pushFrom_ != null) {
-        output.writeMessage(3, getPushFrom());
+      if (roomType_ != com.zaly.proto.core.MessageOuterClass.MessageRoomType.MessageRoomGroup.getNumber()) {
+        output.writeEnum(3, roomType_);
       }
-      if (notification_ != null) {
-        output.writeMessage(4, getNotification());
+      if (!getFromUserIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, fromUserId_);
       }
-      for (int i = 0; i < pushTo_.size(); i++) {
-        output.writeMessage(5, pushTo_.get(i));
+      if (!getFromUserNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, fromUserName_);
+      }
+      if (msgType_ != com.zaly.proto.core.MessageOuterClass.MessageType.MessageInvalid.getNumber()) {
+        output.writeEnum(6, msgType_);
+      }
+      if (!getPushContentBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, pushContent_);
+      }
+      if (!getIconHrefBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, iconHref_);
+      }
+      if (!getGotoUrlBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, gotoUrl_);
+      }
+      for (int i = 0; i < toDevicePubkPemIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, toDevicePubkPemIds_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -2278,25 +2150,42 @@ public final class Common {
       if (size != -1) return size;
 
       size = 0;
-      if (roomType_ != com.zaly.proto.platform.Common.PushRoomType.PushRoomGroup.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, roomType_);
+      if (!getRoomIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, roomId_);
       }
-      if (pushType_ != com.zaly.proto.platform.Common.PushType.PushMessageInvalid.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, pushType_);
+      if (!getRoomNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, roomName_);
       }
-      if (pushFrom_ != null) {
+      if (roomType_ != com.zaly.proto.core.MessageOuterClass.MessageRoomType.MessageRoomGroup.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getPushFrom());
+          .computeEnumSize(3, roomType_);
       }
-      if (notification_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getNotification());
+      if (!getFromUserIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, fromUserId_);
       }
-      for (int i = 0; i < pushTo_.size(); i++) {
+      if (!getFromUserNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, fromUserName_);
+      }
+      if (msgType_ != com.zaly.proto.core.MessageOuterClass.MessageType.MessageInvalid.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, pushTo_.get(i));
+          .computeEnumSize(6, msgType_);
+      }
+      if (!getPushContentBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, pushContent_);
+      }
+      if (!getIconHrefBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, iconHref_);
+      }
+      if (!getGotoUrlBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, gotoUrl_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < toDevicePubkPemIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(toDevicePubkPemIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getToDevicePubkPemIdsList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2314,20 +2203,24 @@ public final class Common {
       com.zaly.proto.platform.Common.PushBody other = (com.zaly.proto.platform.Common.PushBody) obj;
 
       boolean result = true;
+      result = result && getRoomId()
+          .equals(other.getRoomId());
+      result = result && getRoomName()
+          .equals(other.getRoomName());
       result = result && roomType_ == other.roomType_;
-      result = result && pushType_ == other.pushType_;
-      result = result && (hasPushFrom() == other.hasPushFrom());
-      if (hasPushFrom()) {
-        result = result && getPushFrom()
-            .equals(other.getPushFrom());
-      }
-      result = result && (hasNotification() == other.hasNotification());
-      if (hasNotification()) {
-        result = result && getNotification()
-            .equals(other.getNotification());
-      }
-      result = result && getPushToList()
-          .equals(other.getPushToList());
+      result = result && getFromUserId()
+          .equals(other.getFromUserId());
+      result = result && getFromUserName()
+          .equals(other.getFromUserName());
+      result = result && msgType_ == other.msgType_;
+      result = result && getPushContent()
+          .equals(other.getPushContent());
+      result = result && getIconHref()
+          .equals(other.getIconHref());
+      result = result && getGotoUrl()
+          .equals(other.getGotoUrl());
+      result = result && getToDevicePubkPemIdsList()
+          .equals(other.getToDevicePubkPemIdsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2339,21 +2232,27 @@ public final class Common {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ROOMID_FIELD_NUMBER;
+      hash = (53 * hash) + getRoomId().hashCode();
+      hash = (37 * hash) + ROOMNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getRoomName().hashCode();
       hash = (37 * hash) + ROOMTYPE_FIELD_NUMBER;
       hash = (53 * hash) + roomType_;
-      hash = (37 * hash) + PUSHTYPE_FIELD_NUMBER;
-      hash = (53 * hash) + pushType_;
-      if (hasPushFrom()) {
-        hash = (37 * hash) + PUSHFROM_FIELD_NUMBER;
-        hash = (53 * hash) + getPushFrom().hashCode();
-      }
-      if (hasNotification()) {
-        hash = (37 * hash) + NOTIFICATION_FIELD_NUMBER;
-        hash = (53 * hash) + getNotification().hashCode();
-      }
-      if (getPushToCount() > 0) {
-        hash = (37 * hash) + PUSHTO_FIELD_NUMBER;
-        hash = (53 * hash) + getPushToList().hashCode();
+      hash = (37 * hash) + FROMUSERID_FIELD_NUMBER;
+      hash = (53 * hash) + getFromUserId().hashCode();
+      hash = (37 * hash) + FROMUSERNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getFromUserName().hashCode();
+      hash = (37 * hash) + MSGTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + msgType_;
+      hash = (37 * hash) + PUSHCONTENT_FIELD_NUMBER;
+      hash = (53 * hash) + getPushContent().hashCode();
+      hash = (37 * hash) + ICONHREF_FIELD_NUMBER;
+      hash = (53 * hash) + getIconHref().hashCode();
+      hash = (37 * hash) + GOTOURL_FIELD_NUMBER;
+      hash = (53 * hash) + getGotoUrl().hashCode();
+      if (getToDevicePubkPemIdsCount() > 0) {
+        hash = (37 * hash) + TODEVICEPUBKPEMIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getToDevicePubkPemIdsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2484,33 +2383,30 @@ public final class Common {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getPushToFieldBuilder();
         }
       }
       public Builder clear() {
         super.clear();
+        roomId_ = "";
+
+        roomName_ = "";
+
         roomType_ = 0;
 
-        pushType_ = 0;
+        fromUserId_ = "";
 
-        if (pushFromBuilder_ == null) {
-          pushFrom_ = null;
-        } else {
-          pushFrom_ = null;
-          pushFromBuilder_ = null;
-        }
-        if (notificationBuilder_ == null) {
-          notification_ = null;
-        } else {
-          notification_ = null;
-          notificationBuilder_ = null;
-        }
-        if (pushToBuilder_ == null) {
-          pushTo_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
-        } else {
-          pushToBuilder_.clear();
-        }
+        fromUserName_ = "";
+
+        msgType_ = 0;
+
+        pushContent_ = "";
+
+        iconHref_ = "";
+
+        gotoUrl_ = "";
+
+        toDevicePubkPemIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -2535,27 +2431,20 @@ public final class Common {
         com.zaly.proto.platform.Common.PushBody result = new com.zaly.proto.platform.Common.PushBody(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
+        result.roomId_ = roomId_;
+        result.roomName_ = roomName_;
         result.roomType_ = roomType_;
-        result.pushType_ = pushType_;
-        if (pushFromBuilder_ == null) {
-          result.pushFrom_ = pushFrom_;
-        } else {
-          result.pushFrom_ = pushFromBuilder_.build();
+        result.fromUserId_ = fromUserId_;
+        result.fromUserName_ = fromUserName_;
+        result.msgType_ = msgType_;
+        result.pushContent_ = pushContent_;
+        result.iconHref_ = iconHref_;
+        result.gotoUrl_ = gotoUrl_;
+        if (((bitField0_ & 0x00000200) == 0x00000200)) {
+          toDevicePubkPemIds_ = toDevicePubkPemIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000200);
         }
-        if (notificationBuilder_ == null) {
-          result.notification_ = notification_;
-        } else {
-          result.notification_ = notificationBuilder_.build();
-        }
-        if (pushToBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
-            pushTo_ = java.util.Collections.unmodifiableList(pushTo_);
-            bitField0_ = (bitField0_ & ~0x00000010);
-          }
-          result.pushTo_ = pushTo_;
-        } else {
-          result.pushTo_ = pushToBuilder_.build();
-        }
+        result.toDevicePubkPemIds_ = toDevicePubkPemIds_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2598,43 +2487,49 @@ public final class Common {
 
       public Builder mergeFrom(com.zaly.proto.platform.Common.PushBody other) {
         if (other == com.zaly.proto.platform.Common.PushBody.getDefaultInstance()) return this;
+        if (!other.getRoomId().isEmpty()) {
+          roomId_ = other.roomId_;
+          onChanged();
+        }
+        if (!other.getRoomName().isEmpty()) {
+          roomName_ = other.roomName_;
+          onChanged();
+        }
         if (other.roomType_ != 0) {
           setRoomTypeValue(other.getRoomTypeValue());
         }
-        if (other.pushType_ != 0) {
-          setPushTypeValue(other.getPushTypeValue());
+        if (!other.getFromUserId().isEmpty()) {
+          fromUserId_ = other.fromUserId_;
+          onChanged();
         }
-        if (other.hasPushFrom()) {
-          mergePushFrom(other.getPushFrom());
+        if (!other.getFromUserName().isEmpty()) {
+          fromUserName_ = other.fromUserName_;
+          onChanged();
         }
-        if (other.hasNotification()) {
-          mergeNotification(other.getNotification());
+        if (other.msgType_ != 0) {
+          setMsgTypeValue(other.getMsgTypeValue());
         }
-        if (pushToBuilder_ == null) {
-          if (!other.pushTo_.isEmpty()) {
-            if (pushTo_.isEmpty()) {
-              pushTo_ = other.pushTo_;
-              bitField0_ = (bitField0_ & ~0x00000010);
-            } else {
-              ensurePushToIsMutable();
-              pushTo_.addAll(other.pushTo_);
-            }
-            onChanged();
+        if (!other.getPushContent().isEmpty()) {
+          pushContent_ = other.pushContent_;
+          onChanged();
+        }
+        if (!other.getIconHref().isEmpty()) {
+          iconHref_ = other.iconHref_;
+          onChanged();
+        }
+        if (!other.getGotoUrl().isEmpty()) {
+          gotoUrl_ = other.gotoUrl_;
+          onChanged();
+        }
+        if (!other.toDevicePubkPemIds_.isEmpty()) {
+          if (toDevicePubkPemIds_.isEmpty()) {
+            toDevicePubkPemIds_ = other.toDevicePubkPemIds_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+          } else {
+            ensureToDevicePubkPemIdsIsMutable();
+            toDevicePubkPemIds_.addAll(other.toDevicePubkPemIds_);
           }
-        } else {
-          if (!other.pushTo_.isEmpty()) {
-            if (pushToBuilder_.isEmpty()) {
-              pushToBuilder_.dispose();
-              pushToBuilder_ = null;
-              pushTo_ = other.pushTo_;
-              bitField0_ = (bitField0_ & ~0x00000010);
-              pushToBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getPushToFieldBuilder() : null;
-            } else {
-              pushToBuilder_.addAllMessages(other.pushTo_);
-            }
-          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2664,15 +2559,178 @@ public final class Common {
       }
       private int bitField0_;
 
+      private java.lang.Object roomId_ = "";
+      /**
+       * <pre>
+       * subTitle
+       * if roomId != "" &amp;&amp; roomName != "", show the subTitle
+       * </pre>
+       *
+       * <code>string roomId = 1;</code>
+       */
+      public java.lang.String getRoomId() {
+        java.lang.Object ref = roomId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          roomId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * subTitle
+       * if roomId != "" &amp;&amp; roomName != "", show the subTitle
+       * </pre>
+       *
+       * <code>string roomId = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRoomIdBytes() {
+        java.lang.Object ref = roomId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          roomId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * subTitle
+       * if roomId != "" &amp;&amp; roomName != "", show the subTitle
+       * </pre>
+       *
+       * <code>string roomId = 1;</code>
+       */
+      public Builder setRoomId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        roomId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * subTitle
+       * if roomId != "" &amp;&amp; roomName != "", show the subTitle
+       * </pre>
+       *
+       * <code>string roomId = 1;</code>
+       */
+      public Builder clearRoomId() {
+        
+        roomId_ = getDefaultInstance().getRoomId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * subTitle
+       * if roomId != "" &amp;&amp; roomName != "", show the subTitle
+       * </pre>
+       *
+       * <code>string roomId = 1;</code>
+       */
+      public Builder setRoomIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        roomId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object roomName_ = "";
+      /**
+       * <code>string roomName = 2;</code>
+       */
+      public java.lang.String getRoomName() {
+        java.lang.Object ref = roomName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          roomName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string roomName = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRoomNameBytes() {
+        java.lang.Object ref = roomName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          roomName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string roomName = 2;</code>
+       */
+      public Builder setRoomName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        roomName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string roomName = 2;</code>
+       */
+      public Builder clearRoomName() {
+        
+        roomName_ = getDefaultInstance().getRoomName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string roomName = 2;</code>
+       */
+      public Builder setRoomNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        roomName_ = value;
+        onChanged();
+        return this;
+      }
+
       private int roomType_ = 0;
       /**
-       * <code>.platform.PushRoomType roomType = 1;</code>
+       * <code>.core.MessageRoomType roomType = 3;</code>
        */
       public int getRoomTypeValue() {
         return roomType_;
       }
       /**
-       * <code>.platform.PushRoomType roomType = 1;</code>
+       * <code>.core.MessageRoomType roomType = 3;</code>
        */
       public Builder setRoomTypeValue(int value) {
         roomType_ = value;
@@ -2680,16 +2738,16 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.platform.PushRoomType roomType = 1;</code>
+       * <code>.core.MessageRoomType roomType = 3;</code>
        */
-      public com.zaly.proto.platform.Common.PushRoomType getRoomType() {
-        com.zaly.proto.platform.Common.PushRoomType result = com.zaly.proto.platform.Common.PushRoomType.valueOf(roomType_);
-        return result == null ? com.zaly.proto.platform.Common.PushRoomType.UNRECOGNIZED : result;
+      public com.zaly.proto.core.MessageOuterClass.MessageRoomType getRoomType() {
+        com.zaly.proto.core.MessageOuterClass.MessageRoomType result = com.zaly.proto.core.MessageOuterClass.MessageRoomType.valueOf(roomType_);
+        return result == null ? com.zaly.proto.core.MessageOuterClass.MessageRoomType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.platform.PushRoomType roomType = 1;</code>
+       * <code>.core.MessageRoomType roomType = 3;</code>
        */
-      public Builder setRoomType(com.zaly.proto.platform.Common.PushRoomType value) {
+      public Builder setRoomType(com.zaly.proto.core.MessageOuterClass.MessageRoomType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -2699,7 +2757,7 @@ public final class Common {
         return this;
       }
       /**
-       * <code>.platform.PushRoomType roomType = 1;</code>
+       * <code>.core.MessageRoomType roomType = 3;</code>
        */
       public Builder clearRoomType() {
         
@@ -2708,648 +2766,628 @@ public final class Common {
         return this;
       }
 
-      private int pushType_ = 0;
+      private java.lang.Object fromUserId_ = "";
       /**
-       * <code>.platform.PushType pushType = 2;</code>
+       * <pre>
+       * Sender Info
+       * if fromUserId != "" &amp;&amp; fromUserName != "", show the sender info
+       * </pre>
+       *
+       * <code>string fromUserId = 4;</code>
        */
-      public int getPushTypeValue() {
-        return pushType_;
+      public java.lang.String getFromUserId() {
+        java.lang.Object ref = fromUserId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fromUserId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>.platform.PushType pushType = 2;</code>
+       * <pre>
+       * Sender Info
+       * if fromUserId != "" &amp;&amp; fromUserName != "", show the sender info
+       * </pre>
+       *
+       * <code>string fromUserId = 4;</code>
        */
-      public Builder setPushTypeValue(int value) {
-        pushType_ = value;
+      public com.google.protobuf.ByteString
+          getFromUserIdBytes() {
+        java.lang.Object ref = fromUserId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fromUserId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Sender Info
+       * if fromUserId != "" &amp;&amp; fromUserName != "", show the sender info
+       * </pre>
+       *
+       * <code>string fromUserId = 4;</code>
+       */
+      public Builder setFromUserId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        fromUserId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>.platform.PushType pushType = 2;</code>
+       * <pre>
+       * Sender Info
+       * if fromUserId != "" &amp;&amp; fromUserName != "", show the sender info
+       * </pre>
+       *
+       * <code>string fromUserId = 4;</code>
        */
-      public com.zaly.proto.platform.Common.PushType getPushType() {
-        com.zaly.proto.platform.Common.PushType result = com.zaly.proto.platform.Common.PushType.valueOf(pushType_);
-        return result == null ? com.zaly.proto.platform.Common.PushType.UNRECOGNIZED : result;
+      public Builder clearFromUserId() {
+        
+        fromUserId_ = getDefaultInstance().getFromUserId();
+        onChanged();
+        return this;
       }
       /**
-       * <code>.platform.PushType pushType = 2;</code>
+       * <pre>
+       * Sender Info
+       * if fromUserId != "" &amp;&amp; fromUserName != "", show the sender info
+       * </pre>
+       *
+       * <code>string fromUserId = 4;</code>
        */
-      public Builder setPushType(com.zaly.proto.platform.Common.PushType value) {
+      public Builder setFromUserIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fromUserId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fromUserName_ = "";
+      /**
+       * <code>string fromUserName = 5;</code>
+       */
+      public java.lang.String getFromUserName() {
+        java.lang.Object ref = fromUserName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fromUserName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string fromUserName = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFromUserNameBytes() {
+        java.lang.Object ref = fromUserName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fromUserName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string fromUserName = 5;</code>
+       */
+      public Builder setFromUserName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        fromUserName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string fromUserName = 5;</code>
+       */
+      public Builder clearFromUserName() {
+        
+        fromUserName_ = getDefaultInstance().getFromUserName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string fromUserName = 5;</code>
+       */
+      public Builder setFromUserNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fromUserName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int msgType_ = 0;
+      /**
+       * <pre>
+       * Content
+       * if pushContent != "", use pushContent
+       * else make the content from msgType.
+       * </pre>
+       *
+       * <code>.core.MessageType msgType = 6;</code>
+       */
+      public int getMsgTypeValue() {
+        return msgType_;
+      }
+      /**
+       * <pre>
+       * Content
+       * if pushContent != "", use pushContent
+       * else make the content from msgType.
+       * </pre>
+       *
+       * <code>.core.MessageType msgType = 6;</code>
+       */
+      public Builder setMsgTypeValue(int value) {
+        msgType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Content
+       * if pushContent != "", use pushContent
+       * else make the content from msgType.
+       * </pre>
+       *
+       * <code>.core.MessageType msgType = 6;</code>
+       */
+      public com.zaly.proto.core.MessageOuterClass.MessageType getMsgType() {
+        com.zaly.proto.core.MessageOuterClass.MessageType result = com.zaly.proto.core.MessageOuterClass.MessageType.valueOf(msgType_);
+        return result == null ? com.zaly.proto.core.MessageOuterClass.MessageType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Content
+       * if pushContent != "", use pushContent
+       * else make the content from msgType.
+       * </pre>
+       *
+       * <code>.core.MessageType msgType = 6;</code>
+       */
+      public Builder setMsgType(com.zaly.proto.core.MessageOuterClass.MessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
         
-        pushType_ = value.getNumber();
+        msgType_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.platform.PushType pushType = 2;</code>
+       * <pre>
+       * Content
+       * if pushContent != "", use pushContent
+       * else make the content from msgType.
+       * </pre>
+       *
+       * <code>.core.MessageType msgType = 6;</code>
        */
-      public Builder clearPushType() {
+      public Builder clearMsgType() {
         
-        pushType_ = 0;
+        msgType_ = 0;
         onChanged();
         return this;
       }
 
-      private com.zaly.proto.platform.Common.PushFrom pushFrom_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.zaly.proto.platform.Common.PushFrom, com.zaly.proto.platform.Common.PushFrom.Builder, com.zaly.proto.platform.Common.PushFromOrBuilder> pushFromBuilder_;
+      private java.lang.Object pushContent_ = "";
       /**
-       * <pre>
-       * </pre>
-       *
-       * <code>.platform.PushFrom pushFrom = 3;</code>
+       * <code>string pushContent = 7;</code>
        */
-      public boolean hasPushFrom() {
-        return pushFromBuilder_ != null || pushFrom_ != null;
-      }
-      /**
-       * <pre>
-       * </pre>
-       *
-       * <code>.platform.PushFrom pushFrom = 3;</code>
-       */
-      public com.zaly.proto.platform.Common.PushFrom getPushFrom() {
-        if (pushFromBuilder_ == null) {
-          return pushFrom_ == null ? com.zaly.proto.platform.Common.PushFrom.getDefaultInstance() : pushFrom_;
+      public java.lang.String getPushContent() {
+        java.lang.Object ref = pushContent_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pushContent_ = s;
+          return s;
         } else {
-          return pushFromBuilder_.getMessage();
+          return (java.lang.String) ref;
         }
       }
       /**
-       * <pre>
-       * </pre>
-       *
-       * <code>.platform.PushFrom pushFrom = 3;</code>
+       * <code>string pushContent = 7;</code>
        */
-      public Builder setPushFrom(com.zaly.proto.platform.Common.PushFrom value) {
-        if (pushFromBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          pushFrom_ = value;
-          onChanged();
+      public com.google.protobuf.ByteString
+          getPushContentBytes() {
+        java.lang.Object ref = pushContent_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pushContent_ = b;
+          return b;
         } else {
-          pushFromBuilder_.setMessage(value);
+          return (com.google.protobuf.ByteString) ref;
         }
-
+      }
+      /**
+       * <code>string pushContent = 7;</code>
+       */
+      public Builder setPushContent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pushContent_ = value;
+        onChanged();
         return this;
       }
       /**
-       * <pre>
-       * </pre>
-       *
-       * <code>.platform.PushFrom pushFrom = 3;</code>
+       * <code>string pushContent = 7;</code>
        */
-      public Builder setPushFrom(
-          com.zaly.proto.platform.Common.PushFrom.Builder builderForValue) {
-        if (pushFromBuilder_ == null) {
-          pushFrom_ = builderForValue.build();
-          onChanged();
-        } else {
-          pushFromBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * </pre>
-       *
-       * <code>.platform.PushFrom pushFrom = 3;</code>
-       */
-      public Builder mergePushFrom(com.zaly.proto.platform.Common.PushFrom value) {
-        if (pushFromBuilder_ == null) {
-          if (pushFrom_ != null) {
-            pushFrom_ =
-              com.zaly.proto.platform.Common.PushFrom.newBuilder(pushFrom_).mergeFrom(value).buildPartial();
-          } else {
-            pushFrom_ = value;
-          }
-          onChanged();
-        } else {
-          pushFromBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * </pre>
-       *
-       * <code>.platform.PushFrom pushFrom = 3;</code>
-       */
-      public Builder clearPushFrom() {
-        if (pushFromBuilder_ == null) {
-          pushFrom_ = null;
-          onChanged();
-        } else {
-          pushFrom_ = null;
-          pushFromBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * </pre>
-       *
-       * <code>.platform.PushFrom pushFrom = 3;</code>
-       */
-      public com.zaly.proto.platform.Common.PushFrom.Builder getPushFromBuilder() {
+      public Builder clearPushContent() {
         
+        pushContent_ = getDefaultInstance().getPushContent();
         onChanged();
-        return getPushFromFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * </pre>
-       *
-       * <code>.platform.PushFrom pushFrom = 3;</code>
-       */
-      public com.zaly.proto.platform.Common.PushFromOrBuilder getPushFromOrBuilder() {
-        if (pushFromBuilder_ != null) {
-          return pushFromBuilder_.getMessageOrBuilder();
-        } else {
-          return pushFrom_ == null ?
-              com.zaly.proto.platform.Common.PushFrom.getDefaultInstance() : pushFrom_;
-        }
-      }
-      /**
-       * <pre>
-       * </pre>
-       *
-       * <code>.platform.PushFrom pushFrom = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.zaly.proto.platform.Common.PushFrom, com.zaly.proto.platform.Common.PushFrom.Builder, com.zaly.proto.platform.Common.PushFromOrBuilder> 
-          getPushFromFieldBuilder() {
-        if (pushFromBuilder_ == null) {
-          pushFromBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.zaly.proto.platform.Common.PushFrom, com.zaly.proto.platform.Common.PushFrom.Builder, com.zaly.proto.platform.Common.PushFromOrBuilder>(
-                  getPushFrom(),
-                  getParentForChildren(),
-                  isClean());
-          pushFrom_ = null;
-        }
-        return pushFromBuilder_;
-      }
-
-      private com.zaly.proto.platform.Common.Notification notification_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.zaly.proto.platform.Common.Notification, com.zaly.proto.platform.Common.Notification.Builder, com.zaly.proto.platform.Common.NotificationOrBuilder> notificationBuilder_;
-      /**
-       * <pre>
-       * </pre>
-       *
-       * <code>.platform.Notification notification = 4;</code>
-       */
-      public boolean hasNotification() {
-        return notificationBuilder_ != null || notification_ != null;
-      }
-      /**
-       * <pre>
-       * </pre>
-       *
-       * <code>.platform.Notification notification = 4;</code>
-       */
-      public com.zaly.proto.platform.Common.Notification getNotification() {
-        if (notificationBuilder_ == null) {
-          return notification_ == null ? com.zaly.proto.platform.Common.Notification.getDefaultInstance() : notification_;
-        } else {
-          return notificationBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * </pre>
-       *
-       * <code>.platform.Notification notification = 4;</code>
-       */
-      public Builder setNotification(com.zaly.proto.platform.Common.Notification value) {
-        if (notificationBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          notification_ = value;
-          onChanged();
-        } else {
-          notificationBuilder_.setMessage(value);
-        }
-
         return this;
       }
       /**
-       * <pre>
-       * </pre>
-       *
-       * <code>.platform.Notification notification = 4;</code>
+       * <code>string pushContent = 7;</code>
        */
-      public Builder setNotification(
-          com.zaly.proto.platform.Common.Notification.Builder builderForValue) {
-        if (notificationBuilder_ == null) {
-          notification_ = builderForValue.build();
-          onChanged();
-        } else {
-          notificationBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * </pre>
-       *
-       * <code>.platform.Notification notification = 4;</code>
-       */
-      public Builder mergeNotification(com.zaly.proto.platform.Common.Notification value) {
-        if (notificationBuilder_ == null) {
-          if (notification_ != null) {
-            notification_ =
-              com.zaly.proto.platform.Common.Notification.newBuilder(notification_).mergeFrom(value).buildPartial();
-          } else {
-            notification_ = value;
-          }
-          onChanged();
-        } else {
-          notificationBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * </pre>
-       *
-       * <code>.platform.Notification notification = 4;</code>
-       */
-      public Builder clearNotification() {
-        if (notificationBuilder_ == null) {
-          notification_ = null;
-          onChanged();
-        } else {
-          notification_ = null;
-          notificationBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * </pre>
-       *
-       * <code>.platform.Notification notification = 4;</code>
-       */
-      public com.zaly.proto.platform.Common.Notification.Builder getNotificationBuilder() {
+      public Builder setPushContentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         
+        pushContent_ = value;
         onChanged();
-        return getNotificationFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * </pre>
-       *
-       * <code>.platform.Notification notification = 4;</code>
-       */
-      public com.zaly.proto.platform.Common.NotificationOrBuilder getNotificationOrBuilder() {
-        if (notificationBuilder_ != null) {
-          return notificationBuilder_.getMessageOrBuilder();
-        } else {
-          return notification_ == null ?
-              com.zaly.proto.platform.Common.Notification.getDefaultInstance() : notification_;
-        }
-      }
-      /**
-       * <pre>
-       * </pre>
-       *
-       * <code>.platform.Notification notification = 4;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.zaly.proto.platform.Common.Notification, com.zaly.proto.platform.Common.Notification.Builder, com.zaly.proto.platform.Common.NotificationOrBuilder> 
-          getNotificationFieldBuilder() {
-        if (notificationBuilder_ == null) {
-          notificationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.zaly.proto.platform.Common.Notification, com.zaly.proto.platform.Common.Notification.Builder, com.zaly.proto.platform.Common.NotificationOrBuilder>(
-                  getNotification(),
-                  getParentForChildren(),
-                  isClean());
-          notification_ = null;
-        }
-        return notificationBuilder_;
+        return this;
       }
 
-      private java.util.List<com.zaly.proto.platform.Common.PushTo> pushTo_ =
-        java.util.Collections.emptyList();
-      private void ensurePushToIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-          pushTo_ = new java.util.ArrayList<com.zaly.proto.platform.Common.PushTo>(pushTo_);
-          bitField0_ |= 0x00000010;
+      private java.lang.Object iconHref_ = "";
+      /**
+       * <pre>
+       * icon
+       * avatar must be prefix with "http://" or "https://" 
+       * </pre>
+       *
+       * <code>string iconHref = 8;</code>
+       */
+      public java.lang.String getIconHref() {
+        java.lang.Object ref = iconHref_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          iconHref_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * icon
+       * avatar must be prefix with "http://" or "https://" 
+       * </pre>
+       *
+       * <code>string iconHref = 8;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIconHrefBytes() {
+        java.lang.Object ref = iconHref_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iconHref_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * icon
+       * avatar must be prefix with "http://" or "https://" 
+       * </pre>
+       *
+       * <code>string iconHref = 8;</code>
+       */
+      public Builder setIconHref(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        iconHref_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * icon
+       * avatar must be prefix with "http://" or "https://" 
+       * </pre>
+       *
+       * <code>string iconHref = 8;</code>
+       */
+      public Builder clearIconHref() {
+        
+        iconHref_ = getDefaultInstance().getIconHref();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * icon
+       * avatar must be prefix with "http://" or "https://" 
+       * </pre>
+       *
+       * <code>string iconHref = 8;</code>
+       */
+      public Builder setIconHrefBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        iconHref_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object gotoUrl_ = "";
+      /**
+       * <pre>
+       * GotoUrl
+       * if gotoUrl == "", make the url from the infomation above.
+       * </pre>
+       *
+       * <code>string gotoUrl = 9;</code>
+       */
+      public java.lang.String getGotoUrl() {
+        java.lang.Object ref = gotoUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          gotoUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * GotoUrl
+       * if gotoUrl == "", make the url from the infomation above.
+       * </pre>
+       *
+       * <code>string gotoUrl = 9;</code>
+       */
+      public com.google.protobuf.ByteString
+          getGotoUrlBytes() {
+        java.lang.Object ref = gotoUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gotoUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * GotoUrl
+       * if gotoUrl == "", make the url from the infomation above.
+       * </pre>
+       *
+       * <code>string gotoUrl = 9;</code>
+       */
+      public Builder setGotoUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        gotoUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * GotoUrl
+       * if gotoUrl == "", make the url from the infomation above.
+       * </pre>
+       *
+       * <code>string gotoUrl = 9;</code>
+       */
+      public Builder clearGotoUrl() {
+        
+        gotoUrl_ = getDefaultInstance().getGotoUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * GotoUrl
+       * if gotoUrl == "", make the url from the infomation above.
+       * </pre>
+       *
+       * <code>string gotoUrl = 9;</code>
+       */
+      public Builder setGotoUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        gotoUrl_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList toDevicePubkPemIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureToDevicePubkPemIdsIsMutable() {
+        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+          toDevicePubkPemIds_ = new com.google.protobuf.LazyStringArrayList(toDevicePubkPemIds_);
+          bitField0_ |= 0x00000200;
          }
       }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.zaly.proto.platform.Common.PushTo, com.zaly.proto.platform.Common.PushTo.Builder, com.zaly.proto.platform.Common.PushToOrBuilder> pushToBuilder_;
-
       /**
        * <pre>
-       *support list to receiver
+       * pemId = sha1(pem)，因为平台这边有pem，同时不需要做sign的verify，所以传递Ids，以减少请求包大小
        * </pre>
        *
-       * <code>repeated .platform.PushTo pushTo = 5;</code>
+       * <code>repeated string toDevicePubkPemIds = 10;</code>
        */
-      public java.util.List<com.zaly.proto.platform.Common.PushTo> getPushToList() {
-        if (pushToBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(pushTo_);
-        } else {
-          return pushToBuilder_.getMessageList();
-        }
+      public com.google.protobuf.ProtocolStringList
+          getToDevicePubkPemIdsList() {
+        return toDevicePubkPemIds_.getUnmodifiableView();
       }
       /**
        * <pre>
-       *support list to receiver
+       * pemId = sha1(pem)，因为平台这边有pem，同时不需要做sign的verify，所以传递Ids，以减少请求包大小
        * </pre>
        *
-       * <code>repeated .platform.PushTo pushTo = 5;</code>
+       * <code>repeated string toDevicePubkPemIds = 10;</code>
        */
-      public int getPushToCount() {
-        if (pushToBuilder_ == null) {
-          return pushTo_.size();
-        } else {
-          return pushToBuilder_.getCount();
-        }
+      public int getToDevicePubkPemIdsCount() {
+        return toDevicePubkPemIds_.size();
       }
       /**
        * <pre>
-       *support list to receiver
+       * pemId = sha1(pem)，因为平台这边有pem，同时不需要做sign的verify，所以传递Ids，以减少请求包大小
        * </pre>
        *
-       * <code>repeated .platform.PushTo pushTo = 5;</code>
+       * <code>repeated string toDevicePubkPemIds = 10;</code>
        */
-      public com.zaly.proto.platform.Common.PushTo getPushTo(int index) {
-        if (pushToBuilder_ == null) {
-          return pushTo_.get(index);
-        } else {
-          return pushToBuilder_.getMessage(index);
-        }
+      public java.lang.String getToDevicePubkPemIds(int index) {
+        return toDevicePubkPemIds_.get(index);
       }
       /**
        * <pre>
-       *support list to receiver
+       * pemId = sha1(pem)，因为平台这边有pem，同时不需要做sign的verify，所以传递Ids，以减少请求包大小
        * </pre>
        *
-       * <code>repeated .platform.PushTo pushTo = 5;</code>
+       * <code>repeated string toDevicePubkPemIds = 10;</code>
        */
-      public Builder setPushTo(
-          int index, com.zaly.proto.platform.Common.PushTo value) {
-        if (pushToBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePushToIsMutable();
-          pushTo_.set(index, value);
-          onChanged();
-        } else {
-          pushToBuilder_.setMessage(index, value);
-        }
+      public com.google.protobuf.ByteString
+          getToDevicePubkPemIdsBytes(int index) {
+        return toDevicePubkPemIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * pemId = sha1(pem)，因为平台这边有pem，同时不需要做sign的verify，所以传递Ids，以减少请求包大小
+       * </pre>
+       *
+       * <code>repeated string toDevicePubkPemIds = 10;</code>
+       */
+      public Builder setToDevicePubkPemIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureToDevicePubkPemIdsIsMutable();
+        toDevicePubkPemIds_.set(index, value);
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       *support list to receiver
+       * pemId = sha1(pem)，因为平台这边有pem，同时不需要做sign的verify，所以传递Ids，以减少请求包大小
        * </pre>
        *
-       * <code>repeated .platform.PushTo pushTo = 5;</code>
+       * <code>repeated string toDevicePubkPemIds = 10;</code>
        */
-      public Builder setPushTo(
-          int index, com.zaly.proto.platform.Common.PushTo.Builder builderForValue) {
-        if (pushToBuilder_ == null) {
-          ensurePushToIsMutable();
-          pushTo_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          pushToBuilder_.setMessage(index, builderForValue.build());
-        }
+      public Builder addToDevicePubkPemIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureToDevicePubkPemIdsIsMutable();
+        toDevicePubkPemIds_.add(value);
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       *support list to receiver
+       * pemId = sha1(pem)，因为平台这边有pem，同时不需要做sign的verify，所以传递Ids，以减少请求包大小
        * </pre>
        *
-       * <code>repeated .platform.PushTo pushTo = 5;</code>
+       * <code>repeated string toDevicePubkPemIds = 10;</code>
        */
-      public Builder addPushTo(com.zaly.proto.platform.Common.PushTo value) {
-        if (pushToBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePushToIsMutable();
-          pushTo_.add(value);
-          onChanged();
-        } else {
-          pushToBuilder_.addMessage(value);
-        }
+      public Builder addAllToDevicePubkPemIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureToDevicePubkPemIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, toDevicePubkPemIds_);
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       *support list to receiver
+       * pemId = sha1(pem)，因为平台这边有pem，同时不需要做sign的verify，所以传递Ids，以减少请求包大小
        * </pre>
        *
-       * <code>repeated .platform.PushTo pushTo = 5;</code>
+       * <code>repeated string toDevicePubkPemIds = 10;</code>
        */
-      public Builder addPushTo(
-          int index, com.zaly.proto.platform.Common.PushTo value) {
-        if (pushToBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePushToIsMutable();
-          pushTo_.add(index, value);
-          onChanged();
-        } else {
-          pushToBuilder_.addMessage(index, value);
-        }
+      public Builder clearToDevicePubkPemIds() {
+        toDevicePubkPemIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       *support list to receiver
+       * pemId = sha1(pem)，因为平台这边有pem，同时不需要做sign的verify，所以传递Ids，以减少请求包大小
        * </pre>
        *
-       * <code>repeated .platform.PushTo pushTo = 5;</code>
+       * <code>repeated string toDevicePubkPemIds = 10;</code>
        */
-      public Builder addPushTo(
-          com.zaly.proto.platform.Common.PushTo.Builder builderForValue) {
-        if (pushToBuilder_ == null) {
-          ensurePushToIsMutable();
-          pushTo_.add(builderForValue.build());
-          onChanged();
-        } else {
-          pushToBuilder_.addMessage(builderForValue.build());
-        }
+      public Builder addToDevicePubkPemIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureToDevicePubkPemIdsIsMutable();
+        toDevicePubkPemIds_.add(value);
+        onChanged();
         return this;
-      }
-      /**
-       * <pre>
-       *support list to receiver
-       * </pre>
-       *
-       * <code>repeated .platform.PushTo pushTo = 5;</code>
-       */
-      public Builder addPushTo(
-          int index, com.zaly.proto.platform.Common.PushTo.Builder builderForValue) {
-        if (pushToBuilder_ == null) {
-          ensurePushToIsMutable();
-          pushTo_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          pushToBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       *support list to receiver
-       * </pre>
-       *
-       * <code>repeated .platform.PushTo pushTo = 5;</code>
-       */
-      public Builder addAllPushTo(
-          java.lang.Iterable<? extends com.zaly.proto.platform.Common.PushTo> values) {
-        if (pushToBuilder_ == null) {
-          ensurePushToIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, pushTo_);
-          onChanged();
-        } else {
-          pushToBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       *support list to receiver
-       * </pre>
-       *
-       * <code>repeated .platform.PushTo pushTo = 5;</code>
-       */
-      public Builder clearPushTo() {
-        if (pushToBuilder_ == null) {
-          pushTo_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
-          onChanged();
-        } else {
-          pushToBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       *support list to receiver
-       * </pre>
-       *
-       * <code>repeated .platform.PushTo pushTo = 5;</code>
-       */
-      public Builder removePushTo(int index) {
-        if (pushToBuilder_ == null) {
-          ensurePushToIsMutable();
-          pushTo_.remove(index);
-          onChanged();
-        } else {
-          pushToBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       *support list to receiver
-       * </pre>
-       *
-       * <code>repeated .platform.PushTo pushTo = 5;</code>
-       */
-      public com.zaly.proto.platform.Common.PushTo.Builder getPushToBuilder(
-          int index) {
-        return getPushToFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       *support list to receiver
-       * </pre>
-       *
-       * <code>repeated .platform.PushTo pushTo = 5;</code>
-       */
-      public com.zaly.proto.platform.Common.PushToOrBuilder getPushToOrBuilder(
-          int index) {
-        if (pushToBuilder_ == null) {
-          return pushTo_.get(index);  } else {
-          return pushToBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       *support list to receiver
-       * </pre>
-       *
-       * <code>repeated .platform.PushTo pushTo = 5;</code>
-       */
-      public java.util.List<? extends com.zaly.proto.platform.Common.PushToOrBuilder> 
-           getPushToOrBuilderList() {
-        if (pushToBuilder_ != null) {
-          return pushToBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(pushTo_);
-        }
-      }
-      /**
-       * <pre>
-       *support list to receiver
-       * </pre>
-       *
-       * <code>repeated .platform.PushTo pushTo = 5;</code>
-       */
-      public com.zaly.proto.platform.Common.PushTo.Builder addPushToBuilder() {
-        return getPushToFieldBuilder().addBuilder(
-            com.zaly.proto.platform.Common.PushTo.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       *support list to receiver
-       * </pre>
-       *
-       * <code>repeated .platform.PushTo pushTo = 5;</code>
-       */
-      public com.zaly.proto.platform.Common.PushTo.Builder addPushToBuilder(
-          int index) {
-        return getPushToFieldBuilder().addBuilder(
-            index, com.zaly.proto.platform.Common.PushTo.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       *support list to receiver
-       * </pre>
-       *
-       * <code>repeated .platform.PushTo pushTo = 5;</code>
-       */
-      public java.util.List<com.zaly.proto.platform.Common.PushTo.Builder> 
-           getPushToBuilderList() {
-        return getPushToFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.zaly.proto.platform.Common.PushTo, com.zaly.proto.platform.Common.PushTo.Builder, com.zaly.proto.platform.Common.PushToOrBuilder> 
-          getPushToFieldBuilder() {
-        if (pushToBuilder_ == null) {
-          pushToBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.zaly.proto.platform.Common.PushTo, com.zaly.proto.platform.Common.PushTo.Builder, com.zaly.proto.platform.Common.PushToOrBuilder>(
-                  pushTo_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
-                  getParentForChildren(),
-                  isClean());
-          pushTo_ = null;
-        }
-        return pushToBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3395,3034 +3433,6 @@ public final class Common {
     }
 
     public com.zaly.proto.platform.Common.PushBody getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface RandomWithTimeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:platform.RandomWithTime)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * if currentTime - timestamp &gt; 5000ms, the request will be ignored.
-     * </pre>
-     *
-     * <code>int64 timestamp = 1;</code>
-     */
-    long getTimestamp();
-
-    /**
-     * <pre>
-     * length: &gt;=32
-     * </pre>
-     *
-     * <code>string value = 2;</code>
-     */
-    java.lang.String getValue();
-    /**
-     * <pre>
-     * length: &gt;=32
-     * </pre>
-     *
-     * <code>string value = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getValueBytes();
-  }
-  /**
-   * Protobuf type {@code platform.RandomWithTime}
-   */
-  public  static final class RandomWithTime extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:platform.RandomWithTime)
-      RandomWithTimeOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use RandomWithTime.newBuilder() to construct.
-    private RandomWithTime(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private RandomWithTime() {
-      timestamp_ = 0L;
-      value_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private RandomWithTime(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-
-              timestamp_ = input.readInt64();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              value_ = s;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.zaly.proto.platform.Common.internal_static_platform_RandomWithTime_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.zaly.proto.platform.Common.internal_static_platform_RandomWithTime_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.zaly.proto.platform.Common.RandomWithTime.class, com.zaly.proto.platform.Common.RandomWithTime.Builder.class);
-    }
-
-    public static final int TIMESTAMP_FIELD_NUMBER = 1;
-    private long timestamp_;
-    /**
-     * <pre>
-     * if currentTime - timestamp &gt; 5000ms, the request will be ignored.
-     * </pre>
-     *
-     * <code>int64 timestamp = 1;</code>
-     */
-    public long getTimestamp() {
-      return timestamp_;
-    }
-
-    public static final int VALUE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object value_;
-    /**
-     * <pre>
-     * length: &gt;=32
-     * </pre>
-     *
-     * <code>string value = 2;</code>
-     */
-    public java.lang.String getValue() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        value_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * length: &gt;=32
-     * </pre>
-     *
-     * <code>string value = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getValueBytes() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        value_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (timestamp_ != 0L) {
-        output.writeInt64(1, timestamp_);
-      }
-      if (!getValueBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (timestamp_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, timestamp_);
-      }
-      if (!getValueBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.zaly.proto.platform.Common.RandomWithTime)) {
-        return super.equals(obj);
-      }
-      com.zaly.proto.platform.Common.RandomWithTime other = (com.zaly.proto.platform.Common.RandomWithTime) obj;
-
-      boolean result = true;
-      result = result && (getTimestamp()
-          == other.getTimestamp());
-      result = result && getValue()
-          .equals(other.getValue());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getTimestamp());
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getValue().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.zaly.proto.platform.Common.RandomWithTime parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zaly.proto.platform.Common.RandomWithTime parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.RandomWithTime parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zaly.proto.platform.Common.RandomWithTime parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.RandomWithTime parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zaly.proto.platform.Common.RandomWithTime parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.RandomWithTime parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.zaly.proto.platform.Common.RandomWithTime parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.RandomWithTime parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.zaly.proto.platform.Common.RandomWithTime parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.RandomWithTime parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.zaly.proto.platform.Common.RandomWithTime parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.zaly.proto.platform.Common.RandomWithTime prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code platform.RandomWithTime}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:platform.RandomWithTime)
-        com.zaly.proto.platform.Common.RandomWithTimeOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.zaly.proto.platform.Common.internal_static_platform_RandomWithTime_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.zaly.proto.platform.Common.internal_static_platform_RandomWithTime_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.zaly.proto.platform.Common.RandomWithTime.class, com.zaly.proto.platform.Common.RandomWithTime.Builder.class);
-      }
-
-      // Construct using com.zaly.proto.platform.Common.RandomWithTime.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        timestamp_ = 0L;
-
-        value_ = "";
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.zaly.proto.platform.Common.internal_static_platform_RandomWithTime_descriptor;
-      }
-
-      public com.zaly.proto.platform.Common.RandomWithTime getDefaultInstanceForType() {
-        return com.zaly.proto.platform.Common.RandomWithTime.getDefaultInstance();
-      }
-
-      public com.zaly.proto.platform.Common.RandomWithTime build() {
-        com.zaly.proto.platform.Common.RandomWithTime result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.zaly.proto.platform.Common.RandomWithTime buildPartial() {
-        com.zaly.proto.platform.Common.RandomWithTime result = new com.zaly.proto.platform.Common.RandomWithTime(this);
-        result.timestamp_ = timestamp_;
-        result.value_ = value_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.zaly.proto.platform.Common.RandomWithTime) {
-          return mergeFrom((com.zaly.proto.platform.Common.RandomWithTime)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.zaly.proto.platform.Common.RandomWithTime other) {
-        if (other == com.zaly.proto.platform.Common.RandomWithTime.getDefaultInstance()) return this;
-        if (other.getTimestamp() != 0L) {
-          setTimestamp(other.getTimestamp());
-        }
-        if (!other.getValue().isEmpty()) {
-          value_ = other.value_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.zaly.proto.platform.Common.RandomWithTime parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.zaly.proto.platform.Common.RandomWithTime) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private long timestamp_ ;
-      /**
-       * <pre>
-       * if currentTime - timestamp &gt; 5000ms, the request will be ignored.
-       * </pre>
-       *
-       * <code>int64 timestamp = 1;</code>
-       */
-      public long getTimestamp() {
-        return timestamp_;
-      }
-      /**
-       * <pre>
-       * if currentTime - timestamp &gt; 5000ms, the request will be ignored.
-       * </pre>
-       *
-       * <code>int64 timestamp = 1;</code>
-       */
-      public Builder setTimestamp(long value) {
-        
-        timestamp_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * if currentTime - timestamp &gt; 5000ms, the request will be ignored.
-       * </pre>
-       *
-       * <code>int64 timestamp = 1;</code>
-       */
-      public Builder clearTimestamp() {
-        
-        timestamp_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object value_ = "";
-      /**
-       * <pre>
-       * length: &gt;=32
-       * </pre>
-       *
-       * <code>string value = 2;</code>
-       */
-      public java.lang.String getValue() {
-        java.lang.Object ref = value_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          value_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * length: &gt;=32
-       * </pre>
-       *
-       * <code>string value = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getValueBytes() {
-        java.lang.Object ref = value_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          value_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * length: &gt;=32
-       * </pre>
-       *
-       * <code>string value = 2;</code>
-       */
-      public Builder setValue(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * length: &gt;=32
-       * </pre>
-       *
-       * <code>string value = 2;</code>
-       */
-      public Builder clearValue() {
-        
-        value_ = getDefaultInstance().getValue();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * length: &gt;=32
-       * </pre>
-       *
-       * <code>string value = 2;</code>
-       */
-      public Builder setValueBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:platform.RandomWithTime)
-    }
-
-    // @@protoc_insertion_point(class_scope:platform.RandomWithTime)
-    private static final com.zaly.proto.platform.Common.RandomWithTime DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.zaly.proto.platform.Common.RandomWithTime();
-    }
-
-    public static com.zaly.proto.platform.Common.RandomWithTime getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<RandomWithTime>
-        PARSER = new com.google.protobuf.AbstractParser<RandomWithTime>() {
-      public RandomWithTime parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RandomWithTime(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<RandomWithTime> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RandomWithTime> getParserForType() {
-      return PARSER;
-    }
-
-    public com.zaly.proto.platform.Common.RandomWithTime getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface NotificationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:platform.Notification)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     *一般站点服务名称  [开源阿卡信/第三届互联网大赛]
-     * </pre>
-     *
-     * <code>string pushTitle = 1;</code>
-     */
-    java.lang.String getPushTitle();
-    /**
-     * <pre>
-     *一般站点服务名称  [开源阿卡信/第三届互联网大赛]
-     * </pre>
-     *
-     * <code>string pushTitle = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getPushTitleBytes();
-
-    /**
-     * <pre>
-     *push内容的标题
-     * </pre>
-     *
-     * <code>string pushSubtitle = 2;</code>
-     */
-    java.lang.String getPushSubtitle();
-    /**
-     * <pre>
-     *push内容的标题
-     * </pre>
-     *
-     * <code>string pushSubtitle = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getPushSubtitleBytes();
-
-    /**
-     * <pre>
-     *展示的内容
-     * </pre>
-     *
-     * <code>string pushBody = 3;</code>
-     */
-    java.lang.String getPushBody();
-    /**
-     * <pre>
-     *展示的内容
-     * </pre>
-     *
-     * <code>string pushBody = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getPushBodyBytes();
-
-    /**
-     * <pre>
-     *Push跳转位置
-     * </pre>
-     *
-     * <code>string pushGoto = 4;</code>
-     */
-    java.lang.String getPushGoto();
-    /**
-     * <pre>
-     *Push跳转位置
-     * </pre>
-     *
-     * <code>string pushGoto = 4;</code>
-     */
-    com.google.protobuf.ByteString
-        getPushGotoBytes();
-  }
-  /**
-   * <pre>
-   *支持站点批量发送push的功能
-   * </pre>
-   *
-   * Protobuf type {@code platform.Notification}
-   */
-  public  static final class Notification extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:platform.Notification)
-      NotificationOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Notification.newBuilder() to construct.
-    private Notification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Notification() {
-      pushTitle_ = "";
-      pushSubtitle_ = "";
-      pushBody_ = "";
-      pushGoto_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Notification(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              pushTitle_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              pushSubtitle_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              pushBody_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              pushGoto_ = s;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.zaly.proto.platform.Common.internal_static_platform_Notification_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.zaly.proto.platform.Common.internal_static_platform_Notification_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.zaly.proto.platform.Common.Notification.class, com.zaly.proto.platform.Common.Notification.Builder.class);
-    }
-
-    public static final int PUSHTITLE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object pushTitle_;
-    /**
-     * <pre>
-     *一般站点服务名称  [开源阿卡信/第三届互联网大赛]
-     * </pre>
-     *
-     * <code>string pushTitle = 1;</code>
-     */
-    public java.lang.String getPushTitle() {
-      java.lang.Object ref = pushTitle_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        pushTitle_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *一般站点服务名称  [开源阿卡信/第三届互联网大赛]
-     * </pre>
-     *
-     * <code>string pushTitle = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getPushTitleBytes() {
-      java.lang.Object ref = pushTitle_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        pushTitle_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PUSHSUBTITLE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object pushSubtitle_;
-    /**
-     * <pre>
-     *push内容的标题
-     * </pre>
-     *
-     * <code>string pushSubtitle = 2;</code>
-     */
-    public java.lang.String getPushSubtitle() {
-      java.lang.Object ref = pushSubtitle_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        pushSubtitle_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *push内容的标题
-     * </pre>
-     *
-     * <code>string pushSubtitle = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getPushSubtitleBytes() {
-      java.lang.Object ref = pushSubtitle_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        pushSubtitle_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PUSHBODY_FIELD_NUMBER = 3;
-    private volatile java.lang.Object pushBody_;
-    /**
-     * <pre>
-     *展示的内容
-     * </pre>
-     *
-     * <code>string pushBody = 3;</code>
-     */
-    public java.lang.String getPushBody() {
-      java.lang.Object ref = pushBody_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        pushBody_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *展示的内容
-     * </pre>
-     *
-     * <code>string pushBody = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getPushBodyBytes() {
-      java.lang.Object ref = pushBody_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        pushBody_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PUSHGOTO_FIELD_NUMBER = 4;
-    private volatile java.lang.Object pushGoto_;
-    /**
-     * <pre>
-     *Push跳转位置
-     * </pre>
-     *
-     * <code>string pushGoto = 4;</code>
-     */
-    public java.lang.String getPushGoto() {
-      java.lang.Object ref = pushGoto_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        pushGoto_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *Push跳转位置
-     * </pre>
-     *
-     * <code>string pushGoto = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getPushGotoBytes() {
-      java.lang.Object ref = pushGoto_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        pushGoto_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getPushTitleBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pushTitle_);
-      }
-      if (!getPushSubtitleBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, pushSubtitle_);
-      }
-      if (!getPushBodyBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pushBody_);
-      }
-      if (!getPushGotoBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pushGoto_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getPushTitleBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pushTitle_);
-      }
-      if (!getPushSubtitleBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pushSubtitle_);
-      }
-      if (!getPushBodyBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pushBody_);
-      }
-      if (!getPushGotoBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pushGoto_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.zaly.proto.platform.Common.Notification)) {
-        return super.equals(obj);
-      }
-      com.zaly.proto.platform.Common.Notification other = (com.zaly.proto.platform.Common.Notification) obj;
-
-      boolean result = true;
-      result = result && getPushTitle()
-          .equals(other.getPushTitle());
-      result = result && getPushSubtitle()
-          .equals(other.getPushSubtitle());
-      result = result && getPushBody()
-          .equals(other.getPushBody());
-      result = result && getPushGoto()
-          .equals(other.getPushGoto());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PUSHTITLE_FIELD_NUMBER;
-      hash = (53 * hash) + getPushTitle().hashCode();
-      hash = (37 * hash) + PUSHSUBTITLE_FIELD_NUMBER;
-      hash = (53 * hash) + getPushSubtitle().hashCode();
-      hash = (37 * hash) + PUSHBODY_FIELD_NUMBER;
-      hash = (53 * hash) + getPushBody().hashCode();
-      hash = (37 * hash) + PUSHGOTO_FIELD_NUMBER;
-      hash = (53 * hash) + getPushGoto().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.zaly.proto.platform.Common.Notification parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zaly.proto.platform.Common.Notification parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.Notification parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zaly.proto.platform.Common.Notification parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.Notification parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zaly.proto.platform.Common.Notification parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.Notification parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.zaly.proto.platform.Common.Notification parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.Notification parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.zaly.proto.platform.Common.Notification parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.Notification parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.zaly.proto.platform.Common.Notification parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.zaly.proto.platform.Common.Notification prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     *支持站点批量发送push的功能
-     * </pre>
-     *
-     * Protobuf type {@code platform.Notification}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:platform.Notification)
-        com.zaly.proto.platform.Common.NotificationOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.zaly.proto.platform.Common.internal_static_platform_Notification_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.zaly.proto.platform.Common.internal_static_platform_Notification_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.zaly.proto.platform.Common.Notification.class, com.zaly.proto.platform.Common.Notification.Builder.class);
-      }
-
-      // Construct using com.zaly.proto.platform.Common.Notification.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        pushTitle_ = "";
-
-        pushSubtitle_ = "";
-
-        pushBody_ = "";
-
-        pushGoto_ = "";
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.zaly.proto.platform.Common.internal_static_platform_Notification_descriptor;
-      }
-
-      public com.zaly.proto.platform.Common.Notification getDefaultInstanceForType() {
-        return com.zaly.proto.platform.Common.Notification.getDefaultInstance();
-      }
-
-      public com.zaly.proto.platform.Common.Notification build() {
-        com.zaly.proto.platform.Common.Notification result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.zaly.proto.platform.Common.Notification buildPartial() {
-        com.zaly.proto.platform.Common.Notification result = new com.zaly.proto.platform.Common.Notification(this);
-        result.pushTitle_ = pushTitle_;
-        result.pushSubtitle_ = pushSubtitle_;
-        result.pushBody_ = pushBody_;
-        result.pushGoto_ = pushGoto_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.zaly.proto.platform.Common.Notification) {
-          return mergeFrom((com.zaly.proto.platform.Common.Notification)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.zaly.proto.platform.Common.Notification other) {
-        if (other == com.zaly.proto.platform.Common.Notification.getDefaultInstance()) return this;
-        if (!other.getPushTitle().isEmpty()) {
-          pushTitle_ = other.pushTitle_;
-          onChanged();
-        }
-        if (!other.getPushSubtitle().isEmpty()) {
-          pushSubtitle_ = other.pushSubtitle_;
-          onChanged();
-        }
-        if (!other.getPushBody().isEmpty()) {
-          pushBody_ = other.pushBody_;
-          onChanged();
-        }
-        if (!other.getPushGoto().isEmpty()) {
-          pushGoto_ = other.pushGoto_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.zaly.proto.platform.Common.Notification parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.zaly.proto.platform.Common.Notification) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object pushTitle_ = "";
-      /**
-       * <pre>
-       *一般站点服务名称  [开源阿卡信/第三届互联网大赛]
-       * </pre>
-       *
-       * <code>string pushTitle = 1;</code>
-       */
-      public java.lang.String getPushTitle() {
-        java.lang.Object ref = pushTitle_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          pushTitle_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *一般站点服务名称  [开源阿卡信/第三届互联网大赛]
-       * </pre>
-       *
-       * <code>string pushTitle = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPushTitleBytes() {
-        java.lang.Object ref = pushTitle_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          pushTitle_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *一般站点服务名称  [开源阿卡信/第三届互联网大赛]
-       * </pre>
-       *
-       * <code>string pushTitle = 1;</code>
-       */
-      public Builder setPushTitle(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        pushTitle_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *一般站点服务名称  [开源阿卡信/第三届互联网大赛]
-       * </pre>
-       *
-       * <code>string pushTitle = 1;</code>
-       */
-      public Builder clearPushTitle() {
-        
-        pushTitle_ = getDefaultInstance().getPushTitle();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *一般站点服务名称  [开源阿卡信/第三届互联网大赛]
-       * </pre>
-       *
-       * <code>string pushTitle = 1;</code>
-       */
-      public Builder setPushTitleBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        pushTitle_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object pushSubtitle_ = "";
-      /**
-       * <pre>
-       *push内容的标题
-       * </pre>
-       *
-       * <code>string pushSubtitle = 2;</code>
-       */
-      public java.lang.String getPushSubtitle() {
-        java.lang.Object ref = pushSubtitle_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          pushSubtitle_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *push内容的标题
-       * </pre>
-       *
-       * <code>string pushSubtitle = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPushSubtitleBytes() {
-        java.lang.Object ref = pushSubtitle_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          pushSubtitle_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *push内容的标题
-       * </pre>
-       *
-       * <code>string pushSubtitle = 2;</code>
-       */
-      public Builder setPushSubtitle(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        pushSubtitle_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *push内容的标题
-       * </pre>
-       *
-       * <code>string pushSubtitle = 2;</code>
-       */
-      public Builder clearPushSubtitle() {
-        
-        pushSubtitle_ = getDefaultInstance().getPushSubtitle();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *push内容的标题
-       * </pre>
-       *
-       * <code>string pushSubtitle = 2;</code>
-       */
-      public Builder setPushSubtitleBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        pushSubtitle_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object pushBody_ = "";
-      /**
-       * <pre>
-       *展示的内容
-       * </pre>
-       *
-       * <code>string pushBody = 3;</code>
-       */
-      public java.lang.String getPushBody() {
-        java.lang.Object ref = pushBody_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          pushBody_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *展示的内容
-       * </pre>
-       *
-       * <code>string pushBody = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPushBodyBytes() {
-        java.lang.Object ref = pushBody_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          pushBody_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *展示的内容
-       * </pre>
-       *
-       * <code>string pushBody = 3;</code>
-       */
-      public Builder setPushBody(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        pushBody_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *展示的内容
-       * </pre>
-       *
-       * <code>string pushBody = 3;</code>
-       */
-      public Builder clearPushBody() {
-        
-        pushBody_ = getDefaultInstance().getPushBody();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *展示的内容
-       * </pre>
-       *
-       * <code>string pushBody = 3;</code>
-       */
-      public Builder setPushBodyBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        pushBody_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object pushGoto_ = "";
-      /**
-       * <pre>
-       *Push跳转位置
-       * </pre>
-       *
-       * <code>string pushGoto = 4;</code>
-       */
-      public java.lang.String getPushGoto() {
-        java.lang.Object ref = pushGoto_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          pushGoto_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *Push跳转位置
-       * </pre>
-       *
-       * <code>string pushGoto = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPushGotoBytes() {
-        java.lang.Object ref = pushGoto_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          pushGoto_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *Push跳转位置
-       * </pre>
-       *
-       * <code>string pushGoto = 4;</code>
-       */
-      public Builder setPushGoto(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        pushGoto_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *Push跳转位置
-       * </pre>
-       *
-       * <code>string pushGoto = 4;</code>
-       */
-      public Builder clearPushGoto() {
-        
-        pushGoto_ = getDefaultInstance().getPushGoto();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *Push跳转位置
-       * </pre>
-       *
-       * <code>string pushGoto = 4;</code>
-       */
-      public Builder setPushGotoBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        pushGoto_ = value;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:platform.Notification)
-    }
-
-    // @@protoc_insertion_point(class_scope:platform.Notification)
-    private static final com.zaly.proto.platform.Common.Notification DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.zaly.proto.platform.Common.Notification();
-    }
-
-    public static com.zaly.proto.platform.Common.Notification getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Notification>
-        PARSER = new com.google.protobuf.AbstractParser<Notification>() {
-      public Notification parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Notification(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Notification> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Notification> getParserForType() {
-      return PARSER;
-    }
-
-    public com.zaly.proto.platform.Common.Notification getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PushFromOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:platform.PushFrom)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     *sender
-     * </pre>
-     *
-     * <code>string fromUserId = 1;</code>
-     */
-    java.lang.String getFromUserId();
-    /**
-     * <pre>
-     *sender
-     * </pre>
-     *
-     * <code>string fromUserId = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getFromUserIdBytes();
-
-    /**
-     * <pre>
-     *发送着用户名称，文案展示的一部分
-     * </pre>
-     *
-     * <code>string fromUserName = 2;</code>
-     */
-    java.lang.String getFromUserName();
-    /**
-     * <pre>
-     *发送着用户名称，文案展示的一部分
-     * </pre>
-     *
-     * <code>string fromUserName = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getFromUserNameBytes();
-  }
-  /**
-   * Protobuf type {@code platform.PushFrom}
-   */
-  public  static final class PushFrom extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:platform.PushFrom)
-      PushFromOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use PushFrom.newBuilder() to construct.
-    private PushFrom(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private PushFrom() {
-      fromUserId_ = "";
-      fromUserName_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private PushFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              fromUserId_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              fromUserName_ = s;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.zaly.proto.platform.Common.internal_static_platform_PushFrom_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.zaly.proto.platform.Common.internal_static_platform_PushFrom_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.zaly.proto.platform.Common.PushFrom.class, com.zaly.proto.platform.Common.PushFrom.Builder.class);
-    }
-
-    public static final int FROMUSERID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object fromUserId_;
-    /**
-     * <pre>
-     *sender
-     * </pre>
-     *
-     * <code>string fromUserId = 1;</code>
-     */
-    public java.lang.String getFromUserId() {
-      java.lang.Object ref = fromUserId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        fromUserId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *sender
-     * </pre>
-     *
-     * <code>string fromUserId = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getFromUserIdBytes() {
-      java.lang.Object ref = fromUserId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        fromUserId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int FROMUSERNAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object fromUserName_;
-    /**
-     * <pre>
-     *发送着用户名称，文案展示的一部分
-     * </pre>
-     *
-     * <code>string fromUserName = 2;</code>
-     */
-    public java.lang.String getFromUserName() {
-      java.lang.Object ref = fromUserName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        fromUserName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *发送着用户名称，文案展示的一部分
-     * </pre>
-     *
-     * <code>string fromUserName = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getFromUserNameBytes() {
-      java.lang.Object ref = fromUserName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        fromUserName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getFromUserIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fromUserId_);
-      }
-      if (!getFromUserNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fromUserName_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getFromUserIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fromUserId_);
-      }
-      if (!getFromUserNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fromUserName_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.zaly.proto.platform.Common.PushFrom)) {
-        return super.equals(obj);
-      }
-      com.zaly.proto.platform.Common.PushFrom other = (com.zaly.proto.platform.Common.PushFrom) obj;
-
-      boolean result = true;
-      result = result && getFromUserId()
-          .equals(other.getFromUserId());
-      result = result && getFromUserName()
-          .equals(other.getFromUserName());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + FROMUSERID_FIELD_NUMBER;
-      hash = (53 * hash) + getFromUserId().hashCode();
-      hash = (37 * hash) + FROMUSERNAME_FIELD_NUMBER;
-      hash = (53 * hash) + getFromUserName().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.zaly.proto.platform.Common.PushFrom parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zaly.proto.platform.Common.PushFrom parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.PushFrom parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zaly.proto.platform.Common.PushFrom parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.PushFrom parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zaly.proto.platform.Common.PushFrom parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.PushFrom parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.zaly.proto.platform.Common.PushFrom parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.PushFrom parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.zaly.proto.platform.Common.PushFrom parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.PushFrom parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.zaly.proto.platform.Common.PushFrom parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.zaly.proto.platform.Common.PushFrom prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code platform.PushFrom}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:platform.PushFrom)
-        com.zaly.proto.platform.Common.PushFromOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.zaly.proto.platform.Common.internal_static_platform_PushFrom_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.zaly.proto.platform.Common.internal_static_platform_PushFrom_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.zaly.proto.platform.Common.PushFrom.class, com.zaly.proto.platform.Common.PushFrom.Builder.class);
-      }
-
-      // Construct using com.zaly.proto.platform.Common.PushFrom.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        fromUserId_ = "";
-
-        fromUserName_ = "";
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.zaly.proto.platform.Common.internal_static_platform_PushFrom_descriptor;
-      }
-
-      public com.zaly.proto.platform.Common.PushFrom getDefaultInstanceForType() {
-        return com.zaly.proto.platform.Common.PushFrom.getDefaultInstance();
-      }
-
-      public com.zaly.proto.platform.Common.PushFrom build() {
-        com.zaly.proto.platform.Common.PushFrom result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.zaly.proto.platform.Common.PushFrom buildPartial() {
-        com.zaly.proto.platform.Common.PushFrom result = new com.zaly.proto.platform.Common.PushFrom(this);
-        result.fromUserId_ = fromUserId_;
-        result.fromUserName_ = fromUserName_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.zaly.proto.platform.Common.PushFrom) {
-          return mergeFrom((com.zaly.proto.platform.Common.PushFrom)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.zaly.proto.platform.Common.PushFrom other) {
-        if (other == com.zaly.proto.platform.Common.PushFrom.getDefaultInstance()) return this;
-        if (!other.getFromUserId().isEmpty()) {
-          fromUserId_ = other.fromUserId_;
-          onChanged();
-        }
-        if (!other.getFromUserName().isEmpty()) {
-          fromUserName_ = other.fromUserName_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.zaly.proto.platform.Common.PushFrom parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.zaly.proto.platform.Common.PushFrom) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object fromUserId_ = "";
-      /**
-       * <pre>
-       *sender
-       * </pre>
-       *
-       * <code>string fromUserId = 1;</code>
-       */
-      public java.lang.String getFromUserId() {
-        java.lang.Object ref = fromUserId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          fromUserId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *sender
-       * </pre>
-       *
-       * <code>string fromUserId = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getFromUserIdBytes() {
-        java.lang.Object ref = fromUserId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          fromUserId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *sender
-       * </pre>
-       *
-       * <code>string fromUserId = 1;</code>
-       */
-      public Builder setFromUserId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        fromUserId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *sender
-       * </pre>
-       *
-       * <code>string fromUserId = 1;</code>
-       */
-      public Builder clearFromUserId() {
-        
-        fromUserId_ = getDefaultInstance().getFromUserId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *sender
-       * </pre>
-       *
-       * <code>string fromUserId = 1;</code>
-       */
-      public Builder setFromUserIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        fromUserId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object fromUserName_ = "";
-      /**
-       * <pre>
-       *发送着用户名称，文案展示的一部分
-       * </pre>
-       *
-       * <code>string fromUserName = 2;</code>
-       */
-      public java.lang.String getFromUserName() {
-        java.lang.Object ref = fromUserName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          fromUserName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *发送着用户名称，文案展示的一部分
-       * </pre>
-       *
-       * <code>string fromUserName = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getFromUserNameBytes() {
-        java.lang.Object ref = fromUserName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          fromUserName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *发送着用户名称，文案展示的一部分
-       * </pre>
-       *
-       * <code>string fromUserName = 2;</code>
-       */
-      public Builder setFromUserName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        fromUserName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *发送着用户名称，文案展示的一部分
-       * </pre>
-       *
-       * <code>string fromUserName = 2;</code>
-       */
-      public Builder clearFromUserName() {
-        
-        fromUserName_ = getDefaultInstance().getFromUserName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *发送着用户名称，文案展示的一部分
-       * </pre>
-       *
-       * <code>string fromUserName = 2;</code>
-       */
-      public Builder setFromUserNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        fromUserName_ = value;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:platform.PushFrom)
-    }
-
-    // @@protoc_insertion_point(class_scope:platform.PushFrom)
-    private static final com.zaly.proto.platform.Common.PushFrom DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.zaly.proto.platform.Common.PushFrom();
-    }
-
-    public static com.zaly.proto.platform.Common.PushFrom getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<PushFrom>
-        PARSER = new com.google.protobuf.AbstractParser<PushFrom>() {
-      public PushFrom parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PushFrom(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<PushFrom> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PushFrom> getParserForType() {
-      return PARSER;
-    }
-
-    public com.zaly.proto.platform.Common.PushFrom getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PushToOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:platform.PushTo)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     *接受者的siteUserToken
-     * </pre>
-     *
-     * <code>string siteUserToken = 1;</code>
-     */
-    java.lang.String getSiteUserToken();
-    /**
-     * <pre>
-     *接受者的siteUserToken
-     * </pre>
-     *
-     * <code>string siteUserToken = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getSiteUserTokenBytes();
-  }
-  /**
-   * Protobuf type {@code platform.PushTo}
-   */
-  public  static final class PushTo extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:platform.PushTo)
-      PushToOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use PushTo.newBuilder() to construct.
-    private PushTo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private PushTo() {
-      siteUserToken_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private PushTo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              siteUserToken_ = s;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.zaly.proto.platform.Common.internal_static_platform_PushTo_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.zaly.proto.platform.Common.internal_static_platform_PushTo_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.zaly.proto.platform.Common.PushTo.class, com.zaly.proto.platform.Common.PushTo.Builder.class);
-    }
-
-    public static final int SITEUSERTOKEN_FIELD_NUMBER = 1;
-    private volatile java.lang.Object siteUserToken_;
-    /**
-     * <pre>
-     *接受者的siteUserToken
-     * </pre>
-     *
-     * <code>string siteUserToken = 1;</code>
-     */
-    public java.lang.String getSiteUserToken() {
-      java.lang.Object ref = siteUserToken_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        siteUserToken_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     *接受者的siteUserToken
-     * </pre>
-     *
-     * <code>string siteUserToken = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getSiteUserTokenBytes() {
-      java.lang.Object ref = siteUserToken_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        siteUserToken_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getSiteUserTokenBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, siteUserToken_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getSiteUserTokenBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, siteUserToken_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.zaly.proto.platform.Common.PushTo)) {
-        return super.equals(obj);
-      }
-      com.zaly.proto.platform.Common.PushTo other = (com.zaly.proto.platform.Common.PushTo) obj;
-
-      boolean result = true;
-      result = result && getSiteUserToken()
-          .equals(other.getSiteUserToken());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SITEUSERTOKEN_FIELD_NUMBER;
-      hash = (53 * hash) + getSiteUserToken().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.zaly.proto.platform.Common.PushTo parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zaly.proto.platform.Common.PushTo parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.PushTo parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zaly.proto.platform.Common.PushTo parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.PushTo parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.zaly.proto.platform.Common.PushTo parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.PushTo parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.zaly.proto.platform.Common.PushTo parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.PushTo parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.zaly.proto.platform.Common.PushTo parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.zaly.proto.platform.Common.PushTo parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.zaly.proto.platform.Common.PushTo parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.zaly.proto.platform.Common.PushTo prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code platform.PushTo}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:platform.PushTo)
-        com.zaly.proto.platform.Common.PushToOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.zaly.proto.platform.Common.internal_static_platform_PushTo_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.zaly.proto.platform.Common.internal_static_platform_PushTo_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.zaly.proto.platform.Common.PushTo.class, com.zaly.proto.platform.Common.PushTo.Builder.class);
-      }
-
-      // Construct using com.zaly.proto.platform.Common.PushTo.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        siteUserToken_ = "";
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.zaly.proto.platform.Common.internal_static_platform_PushTo_descriptor;
-      }
-
-      public com.zaly.proto.platform.Common.PushTo getDefaultInstanceForType() {
-        return com.zaly.proto.platform.Common.PushTo.getDefaultInstance();
-      }
-
-      public com.zaly.proto.platform.Common.PushTo build() {
-        com.zaly.proto.platform.Common.PushTo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.zaly.proto.platform.Common.PushTo buildPartial() {
-        com.zaly.proto.platform.Common.PushTo result = new com.zaly.proto.platform.Common.PushTo(this);
-        result.siteUserToken_ = siteUserToken_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.zaly.proto.platform.Common.PushTo) {
-          return mergeFrom((com.zaly.proto.platform.Common.PushTo)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.zaly.proto.platform.Common.PushTo other) {
-        if (other == com.zaly.proto.platform.Common.PushTo.getDefaultInstance()) return this;
-        if (!other.getSiteUserToken().isEmpty()) {
-          siteUserToken_ = other.siteUserToken_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.zaly.proto.platform.Common.PushTo parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.zaly.proto.platform.Common.PushTo) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object siteUserToken_ = "";
-      /**
-       * <pre>
-       *接受者的siteUserToken
-       * </pre>
-       *
-       * <code>string siteUserToken = 1;</code>
-       */
-      public java.lang.String getSiteUserToken() {
-        java.lang.Object ref = siteUserToken_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          siteUserToken_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       *接受者的siteUserToken
-       * </pre>
-       *
-       * <code>string siteUserToken = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getSiteUserTokenBytes() {
-        java.lang.Object ref = siteUserToken_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          siteUserToken_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       *接受者的siteUserToken
-       * </pre>
-       *
-       * <code>string siteUserToken = 1;</code>
-       */
-      public Builder setSiteUserToken(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        siteUserToken_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *接受者的siteUserToken
-       * </pre>
-       *
-       * <code>string siteUserToken = 1;</code>
-       */
-      public Builder clearSiteUserToken() {
-        
-        siteUserToken_ = getDefaultInstance().getSiteUserToken();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       *接受者的siteUserToken
-       * </pre>
-       *
-       * <code>string siteUserToken = 1;</code>
-       */
-      public Builder setSiteUserTokenBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        siteUserToken_ = value;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:platform.PushTo)
-    }
-
-    // @@protoc_insertion_point(class_scope:platform.PushTo)
-    private static final com.zaly.proto.platform.Common.PushTo DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.zaly.proto.platform.Common.PushTo();
-    }
-
-    public static com.zaly.proto.platform.Common.PushTo getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<PushTo>
-        PARSER = new com.google.protobuf.AbstractParser<PushTo>() {
-      public PushTo parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PushTo(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<PushTo> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PushTo> getParserForType() {
-      return PARSER;
-    }
-
-    public com.zaly.proto.platform.Common.PushTo getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8252,26 +5262,6 @@ public final class Common {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_platform_PushBody_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_platform_RandomWithTime_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_platform_RandomWithTime_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_platform_Notification_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_platform_Notification_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_platform_PushFrom_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_platform_PushFrom_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_platform_PushTo_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_platform_PushTo_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_platform_Payload_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8290,41 +5280,30 @@ public final class Common {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025platform/common.proto\022\010platform\"\205\001\n\nPu" +
-      "shHeader\022\023\n\013siteAddress\030\001 \001(\t\022\020\n\010siteNam" +
-      "e\030\002 \001(\t\022\022\n\nsitePubkId\030\003 \001(\t\022(\n\006random\030\004 " +
-      "\001(\0132\030.platform.RandomWithTime\022\022\n\nsignBas" +
-      "e64\030\005 \001(\t\"\320\001\n\010PushBody\022(\n\010roomType\030\001 \001(\016" +
-      "2\026.platform.PushRoomType\022$\n\010pushType\030\002 \001" +
-      "(\0162\022.platform.PushType\022$\n\010pushFrom\030\003 \001(\013" +
-      "2\022.platform.PushFrom\022,\n\014notification\030\004 \001" +
-      "(\0132\026.platform.Notification\022 \n\006pushTo\030\005 \003" +
-      "(\0132\020.platform.PushTo\"2\n\016RandomWithTime\022\021" +
-      "\n\ttimestamp\030\001 \001(\003\022\r\n\005value\030\002 \001(\t\"[\n\014Noti" +
-      "fication\022\021\n\tpushTitle\030\001 \001(\t\022\024\n\014pushSubti" +
-      "tle\030\002 \001(\t\022\020\n\010pushBody\030\003 \001(\t\022\020\n\010pushGoto\030" +
-      "\004 \001(\t\"4\n\010PushFrom\022\022\n\nfromUserId\030\001 \001(\t\022\024\n" +
-      "\014fromUserName\030\002 \001(\t\"\037\n\006PushTo\022\025\n\rsiteUse" +
-      "rToken\030\001 \001(\t\"\207\002\n\007Payload\022#\n\004type\030\001 \001(\0162\025" +
-      ".platform.PayloadType\022\r\n\005token\030\002 \001(\t\022\r\n\005" +
-      "title\030\003 \001(\t\022\020\n\010subTitle\030\004 \001(\t\022\014\n\004body\030\005 " +
-      "\001(\t\022\r\n\005badge\030\006 \001(\005\022\r\n\005sound\030\007 \001(\t\022\020\n\010pus" +
-      "hGoto\030\010 \001(\t\022\016\n\006picUrl\030\t \001(\t\022+\n\005extra\030\n \003" +
-      "(\0132\034.platform.Payload.ExtraEntry\032,\n\nExtr" +
-      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001*\211" +
-      "\001\n\rPushTokenType\022\024\n\020pushTokenInvalid\020\000\022\020" +
-      "\n\014pushTokenIOS\020\001\022\024\n\020pushTokenAndroid\020\002\022\023" +
-      "\n\017pushTokenXiaoMi\020\003\022\023\n\017pushTokenHuawei\020\004" +
-      "\022\020\n\014pushTokenGCM\020\005*1\n\014PushRoomType\022\021\n\rPu" +
-      "shRoomGroup\020\000\022\016\n\nPushRoomU2\020\001*\313\001\n\010PushTy" +
-      "pe\022\026\n\022PushMessageInvalid\020\000\022\025\n\021PushMessag" +
-      "eNotice\020\001\022\023\n\017PushMessageText\020\002\022\024\n\020PushMe" +
-      "ssageImage\020\003\022\024\n\020PushMessageAudio\020\004\022\022\n\016Pu" +
-      "shMessageWeb\020\005\022\030\n\024PushMessageWebNotice\020\006" +
-      "\022!\n\035PushMessageEventFriendRequest\020\024*U\n\013P" +
-      "ayloadType\022\017\n\013UNKNOW_TYPE\020\000\022\007\n\003IOS\020\001\022\013\n\007" +
-      "ANDROID\020\002\022\n\n\006XIAOMI\020\003\022\n\n\006HUAWEI\020\004\022\007\n\003GCM" +
-      "\020\005B\031\n\027com.zaly.proto.platformb\006proto3"
+      "\n\025platform/common.proto\022\010platform\032\022core/" +
+      "message.proto\"{\n\nPushHeader\022\023\n\013siteAddre" +
+      "ss\030\001 \001(\t\022\020\n\010siteName\030\002 \001(\t\022\025\n\rsitePubkPe" +
+      "mId\030\003 \001(\t\022\030\n\020timestampSeconds\030\004 \001(\t\022\025\n\rs" +
+      "ignTimestamp\030\005 \001(\t\"\367\001\n\010PushBody\022\016\n\006roomI" +
+      "d\030\001 \001(\t\022\020\n\010roomName\030\002 \001(\t\022\'\n\010roomType\030\003 " +
+      "\001(\0162\025.core.MessageRoomType\022\022\n\nfromUserId" +
+      "\030\004 \001(\t\022\024\n\014fromUserName\030\005 \001(\t\022\"\n\007msgType\030" +
+      "\006 \001(\0162\021.core.MessageType\022\023\n\013pushContent\030" +
+      "\007 \001(\t\022\020\n\010iconHref\030\010 \001(\t\022\017\n\007gotoUrl\030\t \001(\t" +
+      "\022\032\n\022toDevicePubkPemIds\030\n \003(\t\"\207\002\n\007Payload" +
+      "\022#\n\004type\030\001 \001(\0162\025.platform.PayloadType\022\r\n" +
+      "\005token\030\002 \001(\t\022\r\n\005title\030\003 \001(\t\022\020\n\010subTitle\030" +
+      "\004 \001(\t\022\014\n\004body\030\005 \001(\t\022\r\n\005badge\030\006 \001(\005\022\r\n\005so" +
+      "und\030\007 \001(\t\022\020\n\010pushGoto\030\010 \001(\t\022\016\n\006picUrl\030\t " +
+      "\001(\t\022+\n\005extra\030\n \003(\0132\034.platform.Payload.Ex" +
+      "traEntry\032,\n\nExtraEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001*\211\001\n\rPushTokenType\022\024\n\020push" +
+      "TokenInvalid\020\000\022\020\n\014pushTokenIOS\020\001\022\024\n\020push" +
+      "TokenAndroid\020\002\022\023\n\017pushTokenXiaoMi\020\003\022\023\n\017p" +
+      "ushTokenHuawei\020\004\022\020\n\014pushTokenGCM\020\005*U\n\013Pa" +
+      "yloadType\022\017\n\013UNKNOW_TYPE\020\000\022\007\n\003IOS\020\001\022\013\n\007A" +
+      "NDROID\020\002\022\n\n\006XIAOMI\020\003\022\n\n\006HUAWEI\020\004\022\007\n\003GCM\020" +
+      "\005B\031\n\027com.zaly.proto.platformb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8337,45 +5316,22 @@ public final class Common {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.zaly.proto.core.MessageOuterClass.getDescriptor(),
         }, assigner);
     internal_static_platform_PushHeader_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_platform_PushHeader_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_platform_PushHeader_descriptor,
-        new java.lang.String[] { "SiteAddress", "SiteName", "SitePubkId", "Random", "SignBase64", });
+        new java.lang.String[] { "SiteAddress", "SiteName", "SitePubkPemId", "TimestampSeconds", "SignTimestamp", });
     internal_static_platform_PushBody_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_platform_PushBody_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_platform_PushBody_descriptor,
-        new java.lang.String[] { "RoomType", "PushType", "PushFrom", "Notification", "PushTo", });
-    internal_static_platform_RandomWithTime_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_platform_RandomWithTime_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_platform_RandomWithTime_descriptor,
-        new java.lang.String[] { "Timestamp", "Value", });
-    internal_static_platform_Notification_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_platform_Notification_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_platform_Notification_descriptor,
-        new java.lang.String[] { "PushTitle", "PushSubtitle", "PushBody", "PushGoto", });
-    internal_static_platform_PushFrom_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_platform_PushFrom_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_platform_PushFrom_descriptor,
-        new java.lang.String[] { "FromUserId", "FromUserName", });
-    internal_static_platform_PushTo_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_platform_PushTo_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_platform_PushTo_descriptor,
-        new java.lang.String[] { "SiteUserToken", });
+        new java.lang.String[] { "RoomId", "RoomName", "RoomType", "FromUserId", "FromUserName", "MsgType", "PushContent", "IconHref", "GotoUrl", "ToDevicePubkPemIds", });
     internal_static_platform_Payload_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_platform_Payload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_platform_Payload_descriptor,
@@ -8386,6 +5342,7 @@ public final class Common {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_platform_Payload_ExtraEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    com.zaly.proto.core.MessageOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

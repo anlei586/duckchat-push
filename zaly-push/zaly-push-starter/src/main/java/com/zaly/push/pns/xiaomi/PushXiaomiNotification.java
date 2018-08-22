@@ -54,6 +54,8 @@ public class PushXiaomiNotification implements IPushNotification {
 
 		try {
 
+			logger.info("xiaomi push app={} pack={}", app, xiaomiPack.toString());
+
 			String appSecretKey = null;
 			String xiaomiToken = xiaomiPack.getPushToken();
 			boolean isSandbox = false;
@@ -70,9 +72,12 @@ public class PushXiaomiNotification implements IPushNotification {
 				case DUCKCHAT:
 					appSecretKey = DUCKCHAT_SECRET_KEY_DEBUG;
 					xiaomiPack.setRestrictedPackageName(DUCKCHAT_PACKAGE_NAME_DEBUG);
+					logger.info("xiaomi push duckchat => sandbox ");
 					break;
 				default:
-					return;
+					logger.error("xiaomi push error app type => sandbox ");
+					throw new Exception("xiaomi push error app type => sandbox ");
+					// return;
 				}
 
 			} else {
@@ -87,12 +92,17 @@ public class PushXiaomiNotification implements IPushNotification {
 					xiaomiPack.setRestrictedPackageName(DUCKCHAT_PACKAGE_NAME);
 					break;
 				default:
-					return;
+					logger.error("xiaomi push error app type => official ");
+					throw new Exception("xiaomi push error app type => official ");
+					// return;
 				}
 
 			}
 
 			Message message = xiaomiPack.buildMessage();
+
+			logger.info("start to send xiaomi push message={}", message.toString());
+
 			Result result = XiaomiPushClient.pushMessage(appSecretKey, xiaomiToken, message);
 
 			logger.info("send xiaomi push isSandbox={} result={}", isSandbox, result);

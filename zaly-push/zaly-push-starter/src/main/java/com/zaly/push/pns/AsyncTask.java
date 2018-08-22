@@ -48,6 +48,8 @@ public class AsyncTask {
 				public void run() {
 					try {
 
+						logger.info("zaly-push async task app={} pack={}", app, pack.toString());
+
 						switch (pack.getType()) {
 
 						case IOS:

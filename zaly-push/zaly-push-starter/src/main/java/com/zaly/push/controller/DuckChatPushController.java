@@ -45,9 +45,12 @@ public class DuckChatPushController extends AbstractPushController {
 
 			List<Common.Payload> payloadList = request.getPayloadsList();
 
-			logger.info("/duckchat/push payload={}", payloadList.toString());
+			logger.info("/duckchat/push payloadList={}", payloadList.toString());
+			logger.info("/duckchat/push payloadSize={}", payloadList.size());
 
 			for (Common.Payload payload : payloadList) {
+
+				logger.info("/duckchat/push payload={}", payload.toString());
 
 				Common.PayloadType type = payload.getType();
 

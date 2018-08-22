@@ -23,6 +23,7 @@ public class APNsPackage implements IPushPackage {
 
 	private String token;
 	private String title;
+	private String subtitle;
 	private String body;
 	private int badge;
 	private String category;
@@ -39,6 +40,21 @@ public class APNsPackage implements IPushPackage {
 
 	public void setTitle(String title) {
 		this.title = title;
+	}
+
+	/**
+	 * @return the subtitle
+	 */
+	public String getSubtitle() {
+		return subtitle;
+	}
+
+	/**
+	 * @param subtitle
+	 *            the subtitle to set
+	 */
+	public void setSubtitle(String subtitle) {
+		this.subtitle = subtitle;
 	}
 
 	public String getBody() {
@@ -88,7 +104,10 @@ public class APNsPackage implements IPushPackage {
 		PayloadBuilder payLoadBuilder = Payload.newPayload();
 
 		if (title != null) {
-			payLoadBuilder.addAlertTitle(title);
+			payLoadBuilder.addTitle(title);
+		}
+		if (subtitle != null) {
+			payLoadBuilder.addSubTitle(subtitle);
 		}
 		if (body != null) {
 			payLoadBuilder.addAlertBody(body);

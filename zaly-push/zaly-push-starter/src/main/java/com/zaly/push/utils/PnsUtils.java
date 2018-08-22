@@ -21,6 +21,8 @@ public class PnsUtils {
 		apk.setToken(payload.getToken());
 
 		apk.setTitle(payload.getTitle());
+		apk.setSubtitle(payload.getSubTitle());
+
 		apk.setBody(payload.getBody());
 		apk.setPushGoto(payload.getPushGoto());
 

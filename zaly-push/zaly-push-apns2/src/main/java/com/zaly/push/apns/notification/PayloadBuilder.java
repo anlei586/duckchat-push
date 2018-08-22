@@ -32,8 +32,13 @@ public final class PayloadBuilder {
 		this.rootExtra = new HashMap<>();
 	}
 
-	public PayloadBuilder addAlertTitle(final String title) {
+	public PayloadBuilder addTitle(final String title) {
 		customAlert.put("title", title);
+		return this;
+	}
+
+	public PayloadBuilder addSubTitle(final String subtitle) {
+		customAlert.put("subtitle", subtitle);
 		return this;
 	}
 

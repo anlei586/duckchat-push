@@ -1,18 +1,18 @@
 package com.zaly.push.web;
 
-import java.io.ByteArrayOutputStream;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.stereotype.Component;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.zaly.proto.core.Net;
 
-@Component
+//@Component
 public class ZalyInterceptor implements HandlerInterceptor {
+	private static final Logger logger = LoggerFactory.getLogger(ZalyInterceptor.class);
 
 	/**
 	 * dispatch ->preHandler -> controller
@@ -20,7 +20,6 @@ public class ZalyInterceptor implements HandlerInterceptor {
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
-		ByteArrayOutputStream baos = null;
 		try {
 			byte[] dataBytes = ZalyWebUtils.requestToBytes(request);
 
@@ -31,11 +30,7 @@ public class ZalyInterceptor implements HandlerInterceptor {
 			System.out.println("ZalyInterceptor .preHandle param=" + data.toString());
 			return true;
 		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			if (baos != null) {
-				baos.close();
-			}
+			logger.error("zaly http pre handle", e);
 		}
 		return false;
 	}

@@ -29,7 +29,7 @@ public class PushXiaomiNotification implements IPushNotification {
 
 	// duckchat
 	private static final String DUCKCHAT_PACKAGE_NAME = "com.akaxin.zaly";
-	private static final String DUCKCHAT_SECRET_KEY = "4gwLruEYbHHmCPTz2qG+bQ==";
+	private static final String DUCKCHAT_SECRET_KEY = "o+qf1pVBMcmos/IrvefeRQ==";
 
 	private static final String DUCKCHAT_PACKAGE_NAME_DEBUG = "com.akaxin.zaly.debug";
 	private static final String DUCKCHAT_SECRET_KEY_DEBUG = "uNaJP3iseFbFRAVG96AcCg==";

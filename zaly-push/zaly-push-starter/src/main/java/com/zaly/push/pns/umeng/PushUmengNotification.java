@@ -92,6 +92,7 @@ public class PushUmengNotification implements IPushNotification {
 			unicast.setTicker(umPack.getTicker());
 			unicast.setTitle(umPack.getTitle());
 			unicast.setText(umPack.getText());
+			unicast.setPlaySound(true);
 			unicast.goAppAfterOpen();
 			unicast.setDisplayType(AndroidNotification.DisplayType.NOTIFICATION);
 

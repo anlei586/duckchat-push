@@ -151,7 +151,7 @@ public class XiaomiPackage implements IPushPackage {
 		if (StringUtils.isNotEmpty(this.pushGoto)) {
 			messageBuilder.extra(PushConst.GOTO_URL, this.pushGoto);
 		}
-
+		messageBuilder.extra("EXTRA_PARAM_NOTIFY_FOREGROUND", "0");
 		return messageBuilder.build();
 	}
 

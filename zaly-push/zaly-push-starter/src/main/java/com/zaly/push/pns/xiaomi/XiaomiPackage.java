@@ -2,6 +2,7 @@ package com.zaly.push.pns.xiaomi;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -111,8 +112,8 @@ public class XiaomiPackage implements IPushPackage {
 	}
 
 	public int getNotifyId() {
-		// Random random = new Random();
-		// this.notifyId = random.nextInt(10000);
+		Random random = new Random();
+		this.notifyId = random.nextInt(10000);
 		return notifyId;
 	}
 

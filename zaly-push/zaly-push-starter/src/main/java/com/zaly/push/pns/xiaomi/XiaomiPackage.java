@@ -112,8 +112,8 @@ public class XiaomiPackage implements IPushPackage {
 	}
 
 	public int getNotifyId() {
-		Random random = new Random();
-		this.notifyId = random.nextInt(10000);
+//		Random random = new Random();
+//		this.notifyId = random.nextInt(10000);
 		return notifyId;
 	}
 

@@ -43,7 +43,7 @@ public class APNsNotification {
 	}
 
 	public boolean pushNotification(APNsPackage apnsPack) {
-		logger.info("token={} payload={}", apnsPack.getToken(), apnsPack.buildPayloadJson());
+//		logger.info("token={} payload={}", apnsPack.getToken(), apnsPack.buildPayloadJson());
 		return sendPayload(apnsPack.getToken(), apnsPack.buildPayloadJson());
 	}
 

@@ -18,7 +18,6 @@ public class XiaomiPushClient {
 	private static final Logger logger = LoggerFactory.getLogger(XiaomiPushClient.class);
 
 	public static Result pushMessage(String appSecretKey, String token, Message message) throws Exception {
-		logger.info("push xiaoxi message appSecretKey={} token={} message={}", appSecretKey, token, message);
 		Sender sender = null;
 		Constants.useOfficial(); // Constants.useSandbox()->only for ios sandbox
 		sender = new Sender(appSecretKey);

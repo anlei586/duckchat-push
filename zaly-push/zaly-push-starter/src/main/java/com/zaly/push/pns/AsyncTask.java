@@ -29,7 +29,6 @@ public class AsyncTask {
 
 				@Override
 				public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
-					// TODO Auto-generated method stub
 					logger.error("rejected async push thread activeCount={}, queueSize={}", executor.getActiveCount(),
 							executor.getQueue());
 				}
@@ -47,7 +46,6 @@ public class AsyncTask {
 				@Override
 				public void run() {
 					try {
-
 						logger.info("zaly-push async task app={} pack={}", app, pack.toString());
 
 						switch (pack.getType()) {

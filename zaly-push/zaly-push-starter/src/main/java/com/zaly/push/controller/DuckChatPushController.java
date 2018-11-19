@@ -42,7 +42,7 @@ public class DuckChatPushController extends AbstractPushController {
 
 			List<Common.Payload> payloadList = request.getPayloadsList();
 
-			logger.info("/duckchat/push count={} payloadList={}", payloadList.size(), payloadList.toString());
+			logger.info("[duckchat_push= action={} count={} ", action, payloadList.size());
 
 			for (Common.Payload payload : payloadList) {
 
@@ -78,7 +78,6 @@ public class DuckChatPushController extends AbstractPushController {
 			errCode = ErrorCode.SUCCESS;
 		} catch (Exception e) {
 			e.printStackTrace();
-			// logger.error("/duckchat/push error", e);
 		}
 
 		ApiPushPayload.ApiPushPayloadResponse response = ApiPushPayload.ApiPushPayloadResponse.newBuilder().build();

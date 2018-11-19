@@ -98,12 +98,9 @@ public class PushUmengNotification implements IPushNotification {
 
 			unicast.setExtraField(PushConst.GOTO_URL, umPack.getPushGoto());
 
-			logger.info("start send umeng push masterSecret={}", unicast.getAppMasterSecret());
-			logger.info("start send umeng push postBody={}", unicast.getPostBody());
-
 			PushResult result = umengPushclient.send(unicast);
 
-			logger.info("send umeng push result={}", result.toString());
+			logger.info("send U-MENG push body={} result={}", unicast.getPostBody(), result.toString());
 		} catch (Exception e) {
 			logger.error("push umeng notification error", e);
 		}

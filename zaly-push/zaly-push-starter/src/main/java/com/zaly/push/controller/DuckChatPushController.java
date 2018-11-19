@@ -46,8 +46,6 @@ public class DuckChatPushController extends AbstractPushController {
 
 			for (Common.Payload payload : payloadList) {
 
-				logger.info("/duckchat/push payload={}", payload.toString());
-
 				Common.PayloadType type = payload.getType();
 
 				IPushPackage pack = null;

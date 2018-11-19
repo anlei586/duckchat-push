@@ -34,7 +34,7 @@ public class PushXiaomiNotification implements IPushNotification {
 	private static final String DUCKCHAT_PACKAGE_NAME_DEBUG = "com.akaxin.zaly.debug";
 	private static final String DUCKCHAT_SECRET_KEY_DEBUG = "uNaJP3iseFbFRAVG96AcCg==";
 
-	private static final String SANBOX_PRE = "dev";//dev_ ,dev-
+	private static final String SANBOX_PRE = "dev";// dev_ ,dev-
 
 	private PushXiaomiNotification() {
 
@@ -53,9 +53,6 @@ public class PushXiaomiNotification implements IPushNotification {
 		XiaomiPackage xiaomiPack = (XiaomiPackage) iPack;
 
 		try {
-
-			logger.info("xiaomi push app={} pack={}", app, xiaomiPack.toString());
-
 			String appSecretKey = null;
 			String xiaomiToken = xiaomiPack.getPushToken();
 			boolean isSandbox = false;
@@ -72,7 +69,6 @@ public class PushXiaomiNotification implements IPushNotification {
 				case DUCKCHAT:
 					appSecretKey = DUCKCHAT_SECRET_KEY_DEBUG;
 					xiaomiPack.setRestrictedPackageName(DUCKCHAT_PACKAGE_NAME_DEBUG);
-					logger.info("xiaomi push duckchat => sandbox ");
 					break;
 				default:
 					logger.error("xiaomi push error app type => sandbox ");
@@ -86,12 +82,10 @@ public class PushXiaomiNotification implements IPushNotification {
 				case AKAXIN:
 					appSecretKey = AKAXIN_SECRET_KEY;
 					xiaomiPack.setRestrictedPackageName(AKAXIN_PACKAGE_NAME);
-					logger.info("xiaomi push akaxin => official ");
 					break;
 				case DUCKCHAT:
 					appSecretKey = DUCKCHAT_SECRET_KEY;
 					xiaomiPack.setRestrictedPackageName(DUCKCHAT_PACKAGE_NAME);
-					logger.info("xiaomi push duckchat => official ");
 					break;
 				default:
 					logger.error("xiaomi push error app type => official ");
@@ -101,15 +95,11 @@ public class PushXiaomiNotification implements IPushNotification {
 
 			}
 
-			logger.info("start to send xiaomi push");
-
 			Message message = xiaomiPack.buildMessage();
-
-			logger.info("start to send xiaomi push message={}", message.toString());
 
 			Result result = XiaomiPushClient.pushMessage(appSecretKey, xiaomiToken, message);
 
-			logger.info("send xiaomi push isSandbox={} result={}", isSandbox, result);
+			logger.info("send xiaomi push message={} isSandbox={} result={}", message.toString(), isSandbox, result);
 		} catch (Exception e) {
 			logger.error("send xiaomi push error", e);
 		}

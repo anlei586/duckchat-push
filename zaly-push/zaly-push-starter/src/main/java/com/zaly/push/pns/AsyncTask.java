@@ -46,7 +46,7 @@ public class AsyncTask {
 				@Override
 				public void run() {
 					try {
-						logger.info("zaly-push async task app={} pack={}", app, pack.toString());
+//						logger.info("zaly-push async task app={} pack={}", app, pack.toString());
 
 						switch (pack.getType()) {
 

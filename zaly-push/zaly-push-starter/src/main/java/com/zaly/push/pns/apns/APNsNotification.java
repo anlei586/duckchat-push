@@ -60,7 +60,7 @@ public class APNsNotification {
 			IApnsHttp2Client apnsHttp2Client = APNsPushManager.getInstance().getApnsClient(isSandboxEnv);
 			Future<IApnsPushNotificationResponse<IApnsPushNotification>> response = apnsHttp2Client
 					.pushMessageAsync(apnsToken, payload);
-			logger.info("send payload isSandboxEnv={} response={}", isSandboxEnv, response.get());
+//			logger.info("send payload isSandboxEnv={} response={}", isSandboxEnv, response.get());
 			return true;
 		} catch (Exception e) {
 			logger.error("send payload error", e);

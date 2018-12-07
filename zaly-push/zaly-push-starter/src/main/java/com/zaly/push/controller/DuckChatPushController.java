@@ -42,7 +42,7 @@ public class DuckChatPushController extends AbstractPushController {
 
 			List<Common.Payload> payloadList = request.getPayloadsList();
 
-			logger.info("[duckchat_push= action={} count={} ", action, payloadList.size());
+			logger.info("[DuckChat Push] action={} count={} ", action, payloadList.size());
 
 			for (Common.Payload payload : payloadList) {
 

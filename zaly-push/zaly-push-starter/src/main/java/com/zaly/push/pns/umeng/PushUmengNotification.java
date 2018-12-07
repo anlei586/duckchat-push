@@ -100,7 +100,7 @@ public class PushUmengNotification implements IPushNotification {
 
 			PushResult result = umengPushclient.send(unicast);
 
-			logger.info("send U-MENG push body={} result={}", unicast.getPostBody(), result.toString());
+//			logger.info("send U-MENG push body={} result={}", unicast.getPostBody(), result.toString());
 		} catch (Exception e) {
 			logger.error("push umeng notification error", e);
 		}

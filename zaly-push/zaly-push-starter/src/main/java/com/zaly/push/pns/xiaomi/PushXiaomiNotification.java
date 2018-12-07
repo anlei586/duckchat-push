@@ -99,7 +99,7 @@ public class PushXiaomiNotification implements IPushNotification {
 
 			Result result = XiaomiPushClient.pushMessage(appSecretKey, xiaomiToken, message);
 
-			logger.info("send xiaomi push message={} isSandbox={} result={}", message.toString(), isSandbox, result);
+//			logger.info("send xiaomi push message={} isSandbox={} result={}", message.toString(), isSandbox, result);
 		} catch (Exception e) {
 			logger.error("send xiaomi push error", e);
 		}

@@ -30,7 +30,7 @@ public class AsyncTask {
 				@Override
 				public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
 					logger.error("rejected async push thread activeCount={}, queueSize={}", executor.getActiveCount(),
-							executor.getQueue());
+							executor.getQueue().size());
 				}
 
 			});
